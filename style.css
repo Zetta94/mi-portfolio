@@ -416,9 +416,8 @@
   
   .social-item .social-link {
     color: var(--light-gray-70);
-    font-size: 18px;
+    font-size: 28px;
   }
-  
   
   .social-item .social-link:hover { color: var(--light-gray); }
   
@@ -1770,7 +1769,7 @@
    * responsive larger than 1250px screen
    */
   
-  @media (min-width: 1250px) {
+  @media (min-width: 1450px) {
   
     /**
      * RESET
