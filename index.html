@@ -246,7 +246,7 @@
             <li class="service-item hover">
 
               <div class="service-icon-box">
-                <img src="images/frontend.png" alt="web dev icon" width="40">
+                <img src="images/icons/frontend.png" alt="web dev icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -262,7 +262,7 @@
             <li class="service-item hover">
 
               <div class="service-icon-box">
-                <img src="images/ui ux design.png" alt="ui-ux icon" width="40">
+                <img src="images/icons/ui ux design.png" alt="ui-ux icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -275,7 +275,7 @@
 
             </li>
             
-            <li class="service-item hover">
+            <!-- <li class="service-item hover">
 
               <div class="service-icon-box">
                 <img src="images/backend.png" alt="data science icon" width="40">
@@ -305,12 +305,12 @@
                 </p>
               </div>
 
-            </li>
+            </li> -->
 
             <li class="service-item hover">
 
               <div class="service-icon-box">
-                <img src="images/blockchain.png" alt="blockchain icon" width="40">
+                <img src="images/icons/blockchain.png" alt="blockchain icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -326,7 +326,7 @@
             <li class="service-item hover">
 
               <div class="service-icon-box">
-                <img src="images/cloud-computing.png" alt="cloud computing icon" width="40">
+                <img src="images/icons/cloud-computing.png" alt="cloud computing icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -625,7 +625,7 @@
         <section class="skills">
 
           <h3 class="h3 skills-title">Tech Stack</h3>
-
+           <!-- cdn devicon icons used -->
           <ul class="skills-list has-scrollbar">
 
             <li class="skills-item">
@@ -640,6 +640,13 @@
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
               </a>
               <p>SQL</p>
+            </li>
+
+            <li class="skills-item">
+              <a href="#">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+              </a>
+              <p>Figma</p>
             </li>
 
             <li class="skills-item">
@@ -670,12 +677,12 @@
               <p>Solidity</p>
             </li>
 
-            <!-- <li class="skills-item">
+            <li class="skills-item">
               <a href="#">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
               </a>
-              <p>React</p>
-            </li> -->
+              <p>Python</p>
+            </li>
             
             <li class="skills-item">
               <a href="#">
@@ -693,13 +700,6 @@
 
             <!-- <li class="skills-item">
               <a href="#">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-              </a>
-              <p>Figma</p>
-            </li> -->
-
-            <!-- <li class="skills-item">
-              <a href="#">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
               </a>
               <p>Flutter</p>
@@ -710,6 +710,13 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg" />
               </a>
               <p>Git</p>
+            </li>
+
+            <li class="skills-item">
+              <a href="#">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" />
+              </a>
+              <p>Aurdino</p>
             </li>
 
             <li class="skills-item">
@@ -825,25 +832,25 @@
             </li>
 
             <li class="filter-item">
+              <button data-filter-btn>UI UX</button>
+            </li>
+
+            <li class="filter-item">
               <button data-filter-btn>Web development</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Data Science</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Cloud Computing</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>AI</button>
+              <button data-filter-btn>Cloud & IOT</button>
             </li>
 
             <li class="filter-item">
               <button data-filter-btn>Blockchain</button>
             </li>
 
+            <li class="filter-item">
+              <button data-filter-btn>Miscellaneous</button>
+            </li>
+            
             <li class="filter-item">
               <button data-filter-btn>Corporate Skills</button>
             </li>
@@ -867,6 +874,10 @@
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
+
+              <li class="select-item">
+                <button data-select-item>ui ux</button>
+              </li>
               
               <li class="select-item">
                 <button data-select-item>DBMS</button>
@@ -877,19 +888,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Data Science</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Cloud Computing</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>AI</button>
+                <button data-select-item>Cloud & IOT</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item>Blockchain</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>miscellaneous</button>
               </li>
 
               <li class="select-item">
@@ -902,15 +909,69 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="dbms">
-              <a href="images/Coursera DBMS_page-0001.jpg">
+            <li class="project-item  active" data-filter-item data-category="ui ux">
+              <a href="images/Certificate/Google UX design certificate.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/Coursera DBMS_page-0001.jpg" alt="Introduction to Databases" loading="lazy">
+                  <img src="images/Certificate/Google UX design certificate.jpg" alt="Google UX design" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Google UX design</h3>
+
+                <p class="project-category">UI UX</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud & IOT">
+              <a href="images/Certificate/CC_nptel-certificate_page-0001.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/Certificate/CC_nptel-certificate_page-0001.jpg" alt="Cloud Computing Topper by NPTEL" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">NPTEL Cloud Computing Topper</h3>
+
+                <p class="project-category">Cloud & IOT</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="cloud & IOT">
+              <a href="images/Certificate/iot_certificate.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/iot_certificate.jpg" alt="Cloud Computing Topper by NPTEL" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">NPTEL Cloud Computing Topper</h3>
+
+                <p class="project-category">Cloud & IOT</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="dbms">
+              <a href="images/certificate/Coursera DBMS_page-0001.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/Coursera DBMS_page-0001.jpg" alt="Introduction to Databases" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Introduction to Databases</h3>
@@ -921,14 +982,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="dbms">
-              <a href="images/Coursera DBMS2_page-0001.jpg">
+              <a href="images/certificate/Coursera DBMS2_page-0001.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/Coursera DBMS2_page-0001.jpg" alt="Databases and SQL for Data Science with Python" loading="lazy">
+                  <img src="images/certificate/Coursera DBMS2_page-0001.jpg" alt="Databases and SQL for Data Science with Python" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Databases and SQL for Data Science with Python</h3>
@@ -938,87 +999,33 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="images/Coursera-Quantum-mechanics_page-0001.jpg">
+            <li class="project-item  active" data-filter-item data-category="miscellaneous">
+              <a href="images/certificate/Coursera-Quantum-mechanics_page-0001.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/Coursera-Quantum-mechanics_page-0001.jpg" alt="Foundations of Quantum Mechanics" loading="lazy">
+                  <img src="images/certificate/Coursera-Quantum-mechanics_page-0001.jpg" alt="Foundations of Quantum Mechanics" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Foundations of Quantum Mechanics</h3>
 
-                <p class="project-category">Data Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="blockchain">
-              <a href="images/infosys-certificate_page-0001.jpg">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="link"></ion-icon>
-                  </div>
-
-                  <img src="images/infosys-certificate_page-0001.jpg" alt="Infosys Blockchain" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Solidity Smart Contracts: Build DApps in Ethereum Blockchain</h3>
-
-                <p class="project-category">Blockchain</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="cloud computing">
-              <a href="images/CC_nptel-certificate_page-0001.jpg">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="link"></ion-icon>
-                  </div>
-
-                  <img src="images/CC_nptel-certificate_page-0001.jpg" alt="Cloud Computing Topper by NPTEL" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">NPTEL Cloud Computing Topper</h3>
-
-                <p class="project-category">Cloud Computing</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ai">
-              <a href="images/Claude AI Certificate_page-0001.jpg">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="link"></ion-icon>
-                  </div>
-
-                  <img src="images/Claude AI Certificate_page-0001.jpg" alt="Claud AI" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Claud Ai</h3>
-
-                <p class="project-category">AI</p>
+                <p class="project-category">Miscellaneous</p>
 
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="dbms">
-              <a href="images/Coursera DBMS3_page-0001.jpg">
+              <a href="images/certificate/Coursera DBMS3_page-0001.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/Coursera DBMS3_page-0001.jpg" alt="SQL: A Practical Introduction for Quering Databases" loading="lazy">
+                  <img src="images/certificate/Coursera DBMS3_page-0001.jpg" alt="SQL: A Practical Introduction for Quering Databases" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">SQL: A Practical Introduction for Quering Databases</h3>
@@ -1028,15 +1035,69 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="corporate skills">
-              <a href="https://www.linkedin.com/learning/certificates/b693d33485bb347ae4d25d284d06bf8e21cd6814e1fff434003764e7a6ccf02e">
+            <li class="project-item  active" data-filter-item data-category="dbms">
+              <a href="images/certificate/NoSQL_certificate_akshita_page-0001.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/CertificateOfCompletion_PowerPoint Essential Training Microsoft 365.pdf.png" alt="Successful Negotiation : Essential Strategies and Skills" loading="lazy">
+                  <img src="images/certificate/NoSQL_certificate_akshita_page-0001.jpg" alt="NoSQL, Big Data and Spark Foundations" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">NoSQL, Big Data and Spark Foundations</h3>
+
+                <p class="project-category">DBMS</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="miscellaneous">
+              <a href="images/certificate/cybersecurity_akshita_page-0001.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/cybersecurity_akshita_page-0001.jpg" alt="Cybersecurity Attack and Defence Fundamentals" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Cybersecurity Attack and Defence Fundamentals</h3>
+
+                <p class="project-category">Miscellaneous</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="miscellaneous">
+              <a href="images/certificate/Python_certificate.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/Python_certificate.jpg" alt="Programming with Everybody - Python" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Programming with Everybody - Python</h3>
+
+                <p class="project-category">Miscellaneous</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="corporate skills">
+              <a href="images/certificate/PowerPoint Essential Training Microsoft 365.pdf.png">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/PowerPoint Essential Training Microsoft 365.pdf.png" alt="Successful Negotiation : Essential Strategies and Skills" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">PowerPoint Essential Training Microsoft 365</h3>
@@ -1045,16 +1106,34 @@
 
               </a>
             </li>
-            
+
             <li class="project-item  active" data-filter-item data-category="corporate skills">
-              <a href="images/GP Successful negotiation_page-0001.jpg">
+              <a href="images/certificate/Project Management Government Projects certificate.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/GP Successful negotiation_page-0001.jpg" alt="Successful Negotiation : Essential Strategies and Skills" loading="lazy">
+                  <img src="images/certificate/Project Management Government Projects certificate.jpg" alt="Project Management Government Projects" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Project Management Government Projects</h3>
+
+                <p class="project-category">Corporate Skills</p>
+
+              </a>
+            </li>
+            
+            <li class="project-item  active" data-filter-item data-category="corporate skills">
+              <a href="images/certificate/GP Successful negotiation_page-0001.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/GP Successful negotiation_page-0001.jpg" alt="Successful Negotiation : Essential Strategies and Skills" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Successful Negotiation : Essential Strategies and Skills</h3>
@@ -1064,15 +1143,51 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="images/js certificate.jpg">
+            <li class="project-item  active" data-filter-item data-category="blockchain">
+              <a href="images/certificate/infosys-certificate_page-0001.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/js certificate.jpg" alt="avaScript by Metacrafters" loading="lazy">
+                  <img src="images/certificate/infosys-certificate_page-0001.jpg" alt="Infosys Blockchain" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Solidity Smart Contracts: Build DApps in Ethereum Blockchain</h3>
+
+                <p class="project-category">Blockchain</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="miscellaneous">
+              <a href="images/certificate/Claude AI Certificate_page-0001.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/Claude AI Certificate_page-0001.jpg" alt="Claud AI" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Claud Ai</h3>
+
+                <p class="project-category">Miscellaneous</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="images/certificate/js certificate.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/certificate/js certificate.jpg" alt="avaScript by Metacrafters" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">JavaScript by Metacrafters</h3>
@@ -1083,14 +1198,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="blockchain">
-              <a href="images/blockchain.png">
+              <a href="images/certificate/solidity certificate.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/solidity certificate.jpg" alt="Solidity by Metacrafters" loading="lazy">
+                  <img src="images/certificate/solidity certificate.jpg" alt="Solidity by Metacrafters" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Solidity by Metacrafters</h3>
@@ -1099,42 +1214,6 @@
 
               </a>
             </li>
-
-            <!-- <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="link"></ion-icon>
-                  </div>
-
-                  <img src="images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="link"></ion-icon>
-                  </div>
-
-                  <img src="images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li> -->
 
           </ul>
 
@@ -1163,7 +1242,7 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>UI UX design</button>
             </li>
 
             <li class="filter-item">
@@ -1172,6 +1251,10 @@
 
             <li class="filter-item">
               <button data-filter-btn>Python</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Java</button>
             </li>
 
             <li class="filter-item">
@@ -1199,7 +1282,7 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>ui ux design</button>
               </li>
 
               <li class="select-item">
@@ -1208,6 +1291,10 @@
 
               <li class="select-item">
                 <button data-select-item>Python</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Java</button>
               </li>
 
               <li class="select-item">
@@ -1220,6 +1307,42 @@
 
           <ul class="project-list">
 
+            <li class="project-item  active" data-filter-item data-category="ui ux design">
+              <a href="https://www.figma.com/design/wwgpWITNeznxk0k8gwcBlo/Ecommerce-Candy-Store?node-id=0-1&t=DgfEKcfoyHIszFvD-1">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="images/Projects/Ecommerce Candy Store Figma.png" alt="Ecommerce Candy Store" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Ecommerce Candy Store</h3>
+
+                <p class="project-category">UX UI design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ui ux design">
+              <a href="https://www.figma.com/design/ooSU6pwTxh18H0ebKhhIdo/Local-Bus-Tracking-App?t=DgfEKcfoyHIszFvD-1">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="images/Projects/Local Bus Tracking Figma.png" alt="Local Bus Tracking App" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Local Bus Tracking App</h3>
+
+                <p class="project-category">UX UI design</p>
+
+              </a>
+            </li>
+
             <li class="project-item  active" data-filter-item data-category="frontend">
               <a href="https://github.com/akshitasood08/Travel-Website">
 
@@ -1228,7 +1351,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="images/travel-website-project.png" alt="Travel Website" loading="lazy">
+                  <img src="images/Projects/travel-website-project.png" alt="Travel Website" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Travel Website</h3>
@@ -1246,7 +1369,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="images/amazon-clone-project.png" alt="Amazon Clone" loading="lazy">
+                  <img src="images/Projects/amazon-clone-project.png" alt="Amazon Clone" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Amazon Clone using HTML & CSS</h3>
@@ -1264,7 +1387,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="images/Image-resizer-project.png" alt="fundo" loading="lazy">
+                  <img src="images/Projects/Image-resizer-project.png" alt="fundo" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Image Resizer</h3>
@@ -1282,7 +1405,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="images/property management system java project.png" alt="Real-estate-property-management-system" loading="lazy">
+                  <img src="images/Projects/property management system java project.png" alt="Real-estate-property-management-system" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Real Estate Property Management System</h3>
@@ -1300,7 +1423,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="images/Holiproject.png" alt="Happy Holi" loading="lazy">
+                  <img src="images/Projects/Holiproject.png" alt="Happy Holi" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Happy Holi- colourful webpage</h3>
@@ -1310,95 +1433,6 @@
               </a>
             </li>
 
-            <!-- <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">web development</p>
-
-              </a>
-            </li> -->
 
           </ul>
 
@@ -1424,11 +1458,68 @@
 
           <ul class="blog-posts-list">
             
+
+            <li class="blog-post-item">
+              <a href="https://uiuxfundamentals.blogspot.com/2025/04/the-psychology-behind-great-ux-how.html">
+
+                <figure class="blog-banner-box">
+                  <img src="images/Blogs/ui-ux-fundaments.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category"> UI UX Designing</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">April 7, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The Psychology Behind Great UX: How Users Think and Behave</h3>
+
+                  <p class="blog-text">
+                    🤔 Ever wondered why some designs feel effortless while others leave you frustrated? The secret lies in psychology!🧠✨ Master these 8 laws....
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="images/Blogs/AI in web Blog.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">AI in Development</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">August 3, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Future of Web with AI : Designing and Development</h3>
+
+                  <p class="blog-text">
+                    🚀 Dive into how AI is transforming web development and UI/UX design.🤖🖥️ Explore AI-driven tools that automate coding💡, enhance user experiences📊, and personalize interactions....
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
             <li class="blog-post-item">
               <a href="https://webdevultimateguide.blogspot.com/">
 
                 <figure class="blog-banner-box">
-                  <img src="images/web-dev-blog.jpg" alt="Webdevultimateguide" loading="lazy">
+                  <img src="images/Blogs/web-dev-blog.jpg" alt="Webdevultimateguide" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -1444,7 +1535,7 @@
                   <h3 class="h3 blog-item-title">Becoming a Web Developer : From zero to hero</h3>
 
                   <p class="blog-text">
-                    Embark on the web development journey with this comprehensive guide. Discover tips and free resources to become a successful web developer.
+                    🚀 Ready to dive into the world of web development but not sure where to start? 🤯 Don’t worry! This ultimate guide will walk you through the essentials, pro tips, and FREE resources to kickstart your journey. 💻✨ Whether you're a beginner or looking to level up, this is your roadmap to success!🔥🚀....
                   </p>
 
                 </div>
@@ -1457,7 +1548,7 @@
               <a href="https://blockchainbeyondcryptocurrencyyy.blogspot.com/">
 
                 <figure class="blog-banner-box">
-                  <img src="images/blockchain-beyond-crypto-blog.png" alt="UI interactions of the week" loading="lazy">
+                  <img src="images/Blogs/blockchain-beyond-crypto-blog.png" alt="UI interactions of the week" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -1473,7 +1564,7 @@
                   <h3 class="h3 blog-item-title">Blockchain Beyond Cryptocurrency</h3>
 
                   <p class="blog-text">
-                    Discover the transformative power of blockchain beyond digital currencies. Explore real-world applications, from supply chain management and healthcare to finance and beyond.
+                    🔗 Blockchain isn’t just about Bitcoin! 🚀 Explore how this game-changing technology is revolutionizing industries—from supply chain management 📦 and healthcare 🏥 to finance 💰 and beyond. The future is decentralized!🔥....
                   </p>
 
                 </div>
@@ -1485,13 +1576,13 @@
               <a href="https://colorpsychologyunlocked.blogspot.com/">
 
                 <figure class="blog-banner-box">
-                  <img src="images/exploring-color-psychology.blog.jpg" alt="colorpsychologyunlocked" loading="lazy">
+                  <img src="images/Blogs/exploring-color-psychology.blog.jpg" alt="colorpsychologyunlocked" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Web Design</p>
+                    <p class="blog-category">UI UX Designing</p>
 
                     <span class="dot"></span>
 
@@ -1501,7 +1592,7 @@
                   <h3 class="h3 blog-item-title">Color Psychology in Web Designing</h3>
 
                   <p class="blog-text">
-                    Build exceptional online experiences through code and creativity and master the color theory in web designs.
+                    🎨 Elevate your web designs with the perfect blend of code & creativity! 🚀 Master color theory to craft stunning, user-friendly experiences🌈✨....
                   </p>
 
                 </div>
@@ -1513,13 +1604,13 @@
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="images/choosing-font-blog.png" alt="Design digest #80" loading="lazy">
+                  <img src="images/Blogs/choosing-font-blog.png" alt="Design digest #80" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Web Design</p>
+                    <p class="blog-category">UI UX Designing</p>
 
                     <span class="dot"></span>
 
@@ -1529,7 +1620,7 @@
                   <h3 class="h3 blog-item-title">Ultimate Guide for Choosing Website Fonts</h3>
 
                   <p class="blog-text">
-                    Master the art of typography and learn about font psychology, pairing, and hierarchy. Discover the best fonts for readability and visual impact. 
+                    💭 Ever wondered how fonts influence emotions? 🧠🔤 Master the art of typography—learn font psychology, perfect pairings, and hierarchy for stunning designs!🖋️🔥....
                   </p>
 
                 </div>
@@ -1537,61 +1628,6 @@
               </a>
             </li>
 
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
 
           </ul>
 
