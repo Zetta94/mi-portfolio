@@ -1226,7 +1226,35 @@
     transition: transform .4s, opacity .4s;
   }
   
-  
+  .input-group { position: relative; }
+.error-message {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -18px;
+  left: 10px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+.toast.hidden {
+  display: none;
+}
   
   
   

@@ -141,71 +141,85 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
+// Get contact form elements
 
-// contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector('.form-btn');
+const paperPlaneIcon = formBtn.querySelector('ion-icon');
+const toast = document.getElementById('toast');
 
- //add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
-  });
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.remove('hidden');
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+    toast.classList.add('hidden');
+  }, 3000);
 }
 
+function validateInput(input) {
+  const errorMsg = input.nextElementSibling;
+  if (!input.validity.valid) {
+    if (input.validity.valueMissing) {
+      errorMsg.textContent = 'This field is required';
+    } else if (input.validity.typeMismatch) {
+      errorMsg.textContent = 'Enter a valid email';
+    }
+    return false;
+  } else {
+    errorMsg.textContent = '';
+    return true;
+  }
+}
 
-
-formBtn.addEventListener('click', () => {
-  const paperPlaneIcon = formBtn.querySelector('ion-icon');
-  formBtn.classList.add("animate");
-  paperPlaneIcon.style.transform = 'translateX(100vw)'; // Move icon out of screen
-  paperPlaneIcon.style.transition = 'transform 2s ease-in-out';
-  
-  setTimeout(() => {
-    formBtn.innerText = "Sending...";
-  }, 500); // This should be timed with the end of the icon's transition
-
-  // Set a timeout to revert the button back to its original state
-  setTimeout(() => {
-    formBtn.innerText = "Message Sent";
-    paperPlaneIcon.style.transform = 'translateX(0)'; // Reset icon position
-    formBtn.classList.remove("animate");
-  }, 2000); // Adjust the time as needed
+formInputs.forEach(input => {
+  input.addEventListener("input", () => {
+    const allValid = Array.from(formInputs).every(validateInput);
+    formBtn.disabled = !allValid;
+  });
 });
 
-document.querySelector('.form').addEventListener('submit', async function (e) {
+form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
-  const form = e.target;
-  const formData = new FormData(form);
-  const action = form.action;
+  let allValid = true;
+  formInputs.forEach(input => {
+    if (!validateInput(input)) allValid = false;
+  });
+
+  if (!allValid) return;
+
+  formBtn.classList.add("animate");
+  paperPlaneIcon.style.transform = 'translateX(100vw)';
+  paperPlaneIcon.style.transition = 'transform 2s ease-in-out';
+
+  setTimeout(() => {
+    formBtn.innerText = "Sending...";
+  }, 100);
 
   try {
-      const response = await fetch(action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-              'Accept': 'application/json'
-          }
-      });
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
 
-      if (response.ok) {
-          alert('Your message has been sent!');
-          form.reset();
-      } else {
-          alert('Oops! There was a problem submitting your form');
-      }
+    setTimeout(() => {
+      paperPlaneIcon.style.transform = 'translateX(0)';
+      formBtn.classList.remove("animate");
+    }, 2000);
+
+    if (response.ok) {
+      formBtn.innerText = "Message Sent";
+      showToast("Your message has been sent!");
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+    } else {
+      showToast("There was a problem submitting your form.");
+    }
   } catch (error) {
-      alert('Oops! There was a problem submitting your form');
+    showToast("Network error. Please try again.");
   }
 });
-
-
