@@ -14,7 +14,38 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+// Theme toggle
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeToggleIcon = document.getElementById('theme-toggle-icon');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
 
+function setTheme(mode) {
+  if (mode === 'light') {
+    document.body.classList.add('light-mode');
+    themeToggleIcon.textContent = 'Visibility mode 🌞';
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.remove('light-mode');
+    themeToggleIcon.textContent = 'Visibility mode 🌙';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Initial theme
+if (savedTheme) {
+  setTheme(savedTheme);
+} else {
+  setTheme(prefersDark ? 'dark' : 'light');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  if (document.body.classList.contains('light-mode')) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+});
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -79,19 +110,16 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
-
   for (let i = 0; i < filterItems.length; i++) {
-
+    const itemCategory = filterItems[i].dataset.category.toLowerCase();
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (selectedValue === itemCategory) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
 }
 
 // add event in all filter button items for large screen
@@ -112,10 +140,6 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 
 }
-
-
-
-
 
 
 // page navigation variables

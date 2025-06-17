@@ -46,7 +46,8 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="images/my-image.png" alt="Akshita Sood" width="80">
+            <img src="images/my-image.png" alt="Akshita Sood" width="80" class="avatar-static">
+            <img src="images/my-gif.gif" alt="Akshita Sood GIF" width="80" class="avatar-gif">
         </figure>
 
         <div class="info-content">
@@ -55,10 +56,14 @@
           <p class="title">Computer Science and Engineering Student</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <button class="info_more-btn" id="contact-toggle" data-sidebar-btn>
+          <span>Show Contacts ☎️</span>
 
           <ion-icon name="chevron-down"></ion-icon>
+        </button>
+         
+        <button class="info_more-btn" id="theme-toggle" aria-label="Toggle dark/light mode" data-sidebar-btn>
+          <span id="theme-toggle-icon">Visibility mode 🌙</span>
         </button>
 
       </div>
@@ -156,6 +161,7 @@
           </li> -->
 
         </ul>
+          
 
       </div>
 
@@ -597,6 +603,8 @@
           </ol>
 
         </section>
+
+  <div class="separator"> </div>
       <!-- 
         - Experience
       -->
@@ -642,13 +650,14 @@
 
         <br>
       
-
+<div class="separator"> </div>
         <!--
         - Skills
       -->
       <section class="skills">
 
         <h3 class="h3 skills-title">Tech Stack</h3>
+        <br>
         <h2 style="color: var(--vegas-gold); font-size: large;">Languages & Frameworks</h2>
          <!-- cdn devicon icons used -->
         <ul class="skills-list has-scrollbar">
@@ -789,9 +798,10 @@
         </ul>
 
       </section>
+      <br>
 
-<br>
-<br>
+<div class="separator"> </div>
+        
 
       <!--
         - Hobbies
@@ -1035,20 +1045,20 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="ui ux">
-              <a href="images/Certificate/Google UX design certificate.jpg">
+            <li class="project-item  active" data-filter-item data-category="Cloud & IoT">
+              <a href="images/Certificate/Foundation of Cloud IoT Edge ML_page-0001.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/Certificate/Google UX design certificate.jpg" alt="Google UX design" loading="lazy">
+                  <img src="images/Certificate/Foundation of Cloud IoT Edge ML_page-0001.jpg" alt="Foundation of Cloud IoT Edge ML" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Google UX design</h3>
-
-                <p class="project-category">UI UX</p>
+                <h3 class="project-title">Foundation of Cloud IoT Edge ML</h3>
+                <p class="project-detail">Silver 🥈 + Elite 🏅 Badge</p> 
+                <p class="project-category">Cloud & IoT</p>
 
               </a>
             </li>
@@ -1065,7 +1075,7 @@
                 </figure>
 
                 <h3 class="project-title">NPTEL Cloud Computing Topper</h3>
-
+                <p class="project-detail">Silver 🥈 + Topper 🏆 Badge</p>
                 <p class="project-category">Cloud & IoT</p>
 
               </a>
@@ -1079,12 +1089,30 @@
                     <ion-icon name="link"></ion-icon>
                   </div>
 
-                  <img src="images/Certificate/iot_certificate.jpg" alt="Cloud Computing Topper by NPTEL" loading="lazy">
+                  <img src="images/Certificate/iot_certificate.jpg" alt="Internet of Things: Design concepts and use cases" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">NPTEL Cloud Computing Topper</h3>
+                <h3 class="project-title">Internet of Things: Design concepts and use cases</h3>
 
                 <p class="project-category">Cloud & IoT</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ui ux">
+              <a href="images/Certificate/Google UX design certificate.jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/Certificate/Google UX design certificate.jpg" alt="Google UX design" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Google UX design</h3>
+                <p class="project-detail">Professional Course 🎓</p>
+                <p class="project-category">UI UX</p>
 
               </a>
             </li>
@@ -1287,7 +1315,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="miscellaneous">
+            <!-- <li class="project-item  active" data-filter-item data-category="miscellaneous">
               <a href="images/Certificate/Claude AI Certificate_page-0001.jpg">
 
                 <figure class="project-img">
@@ -1301,6 +1329,24 @@
                 <h3 class="project-title">Claud Ai</h3>
 
                 <p class="project-category">Miscellaneous</p>
+
+              </a>
+            </li> -->
+
+            <li class="project-item  active" data-filter-item data-category="blockchain">
+              <a href="images/Certificate/MC_2556_page-0001 (1).jpg">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link"></ion-icon>
+                  </div>
+
+                  <img src="images/Certificate/MC_2556_page-0001 (1).jpg" alt="Industrial Training by Metacrafters" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Industrial Training by Metacrafters</h3>
+
+                <p class="project-category">Blockchain</p>
 
               </a>
             </li>
