@@ -23,11 +23,11 @@ const savedTheme = localStorage.getItem('theme');
 function setTheme(mode) {
   if (mode === 'light') {
     document.body.classList.add('light-mode');
-    themeToggleIcon.textContent = 'Visibility mode 🌞';
+    themeToggleIcon.textContent = 'Visibility mode 🌙';
     localStorage.setItem('theme', 'light');
   } else {
     document.body.classList.remove('light-mode');
-    themeToggleIcon.textContent = 'Visibility mode 🌙';
+    themeToggleIcon.textContent = 'Visibility mode 🌞';
     localStorage.setItem('theme', 'dark');
   }
 }

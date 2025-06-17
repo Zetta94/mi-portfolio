@@ -1728,12 +1728,12 @@ body.light-mode textarea.form-input:focus {
     display: none;
   }
   #theme-toggle::after {
-    content: "🌙";
+    content: "🌞";
     display: inline;
     font-size: 0.8rem;
   }
   body.light-mode #theme-toggle::after {
-    content: "🌞";
+    content: "🌙";
   }
 }  
 
@@ -1749,12 +1749,12 @@ body.light-mode textarea.form-input:focus {
     display: none;
   }
   #theme-toggle::after {
-    content: "🌙";
+    content: "🌞";
     display: inline;
     font-size: 0.8rem;
   }
   body.light-mode #theme-toggle::after {
-    content: "🌞";
+    content: "🌙";
   }
 }  
 
@@ -2048,12 +2048,12 @@ body.light-mode textarea.form-input:focus {
     display: none;
     }
     #theme-toggle::after {
-    content: "🌙";
+    content: "🌞";
     display: inline;
     font-size: 0.8rem;
     }
     body.light-mode #theme-toggle::after {
-    content: "🌞";
+    content: "🌙";
     }
     #theme-toggle {
       margin-top: -30px;
