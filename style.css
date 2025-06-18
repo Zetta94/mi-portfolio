@@ -105,45 +105,60 @@
   /* Light mode variables */
 body.light-mode {
   /* Background Gradients */
-  --bg-gradient-onyx: linear-gradient(to bottom right, hsl(210, 100%, 98%) 3%, hsl(0, 0%, 100%) 97%);
-  --bg-gradient-jet: linear-gradient(to bottom right, hsla(200, 100%, 95%, 0.25) 0%, hsla(200, 100%, 100%, 0) 100%), hsl(0, 0%, 100%);
-  --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(220, 100%, 85%) 0%, hsla(220, 100%, 90%, 0) 50%);
-  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(220, 100%, 85%, 0.25) 0%, hsla(220, 100%, 90%, 0) 59.86%), hsl(0, 0%, 100%);
+  --bg-gradient-onyx: linear-gradient(to bottom right, #FDA1A2 3%, #ffffff 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right, rgba(253, 161, 162, 0.25) 0%, rgba(255, 255, 255, 0) 0%), #ffffff;
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, #FDA1A2 0%, rgba(253, 161, 162, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, rgba(253, 161, 162, 0.25) 0%, rgba(253, 161, 162, 0) 60%), #ffffff;
 
   /* Border Gradient */
-  --border-gradient-onyx: linear-gradient(to bottom right, hsl(240, 80%, 90%) 0%, hsla(220, 100%, 90%, 0) 50%);
+  --border-gradient-onyx: linear-gradient(to bottom right, #FDA1A2 0%, rgba(253, 161, 162, 0) 50%);
 
   /* Text Gradient */
-  --text-gradient-yellow: linear-gradient(to right, hsl(240, 100%, 55%), hsl(210, 100%, 50%));
+  --text-gradient-yellow: linear-gradient(to right, #8E0D3C, #EF3B33);
 
-  /* Grays */
-  --jet: hsl(0, 0%, 60%);
-  --onyx: hsl(0, 0%, 80%);
-  --eerie-black-1: hsl(0, 0%, 95%);
-  --eerie-black-2: hsl(0, 0%, 98%);
-  --smoky-black: hsl(0, 0%, 97%);
+  /* Grays & Neutrals */
+  --jet: hsl(0, 74%, 93%);
+  --onyx: hsl(0, 0%, 85%);
+  --eerie-black-1: hsl(0, 4%, 94%);
+  --eerie-black-2: hsl(0, 0%, 99%);
+  --smoky-black:#FDF5F7; 
 
-  /* Text / Inverse */
+  /* Text Colors */
   --white-1: hsl(0, 0%, 10%);
-  --white-2: hsl(0, 0%, 25%);
+  --white-2: hsl(0, 0%, 30%);
 
   /* Accent Colors */
-  --orange-yellow-crayola: hsl(200, 100%, 45%);   /* Teal Blue */
-  --vegas-gold: hsl(260, 60%, 55%);              /* Soft Violet */
-  --light-gray: hsl(0, 0%, 30%);
-  --light-gray-70: hsla(0, 0%, 30%, 0.7);
-  --bittersweet-shimmer: hsl(280, 55%, 50%);     /* Magenta-Purple */
+  --orange-yellow-crayola: #EF3B33; 
+  --orange-yellow-crayola-2: #1D1842;
+  --vegas-gold: #8E0D3C;               /* Deep Red */
+  --light-gray: hsl(0, 0%, 25%);
+  --light-gray-70: hsla(0, 0%, 25%, 0.7);
+  --bittersweet-shimmer: #4a4286;      /* Rose Pink */
 
   /* Mode */
   color-scheme: light;
 }
+
+
 body.light-mode {
-  background: var(--smoky-black);
+  background: var(--orange-yellow-crayola-2); 
 }
 body.light-mode .sidebar,
 body.light-mode article,
 body.light-mode .navbar {
   border: none !important;
+}
+body.light-mode .timeline-list span,
+body.light-mode .skills-item p{
+  color: var(--bittersweet-shimmer);
+}
+body.light-mode .h2,
+body.light-mode .h4,
+body.light-mode .h5 {
+  color: var(--vegas-gold);
+}
+body.light-mode .h3 {
+  color: var(--orange-yellow-crayola-2);
 }
 body.light-mode .sidebar,
 body.light-mode article {
@@ -155,6 +170,9 @@ body.light-mode .title{
 }
 body.light-mode .navbar{
   background-color: var(--eerie-black-1);
+}
+body.light-mode .service-item{
+  background: var(--bg-gradient-jet);
 }
 body.light-mode .filter-select,
 body.light-mode .select-list,
@@ -171,7 +189,7 @@ body.light-mode .form-btn {
 body.light-mode .form-input,
 body.light-mode textarea.form-input {
   background: rgba(255, 255, 255, 0.35);
-  border: 1.5px solid rgba(200, 200, 255, 0.25);
+  /* border: 1.5px solid rgba(200, 200, 255, 0.25); */
   box-shadow: 0 4px 24px rgba(30, 60, 120, 0.08);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -400,7 +418,6 @@ body.light-mode textarea.form-input:focus {
   }
 
   .avatar-box {
-    background: var(--bg-gradient-onyx);
     border-radius: 20px;
   }
   .avatar-gif {
@@ -980,9 +997,226 @@ body.light-mode textarea.form-input:focus {
     border-radius: inherit;
   }
   
+
+    /**
+   * download resume buttons
+   */
   
-  
-  
+
+.resume-button.dark {
+    --background: #242836;
+    --rectangle: #1C212E;
+    --arrow: #F5F9FF;
+    --text: #F5F9FF;
+    --success: #4BC793;
+}
+.resume-button {
+    --background: #000000;
+    --rectangle: var(--orange-yellow-crayola-2);
+    --success: #4BC793; 
+    --text: #fff;
+    --arrow: #fff;
+    --checkmark: #fff;
+    --shadow: rgba(10, 22, 50, .24);
+    display: flex;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    background: var(--background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px -1px var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.resume-button:active {
+    transform: scale(.95);
+    box-shadow: 0 1px 4px -1px var(--shadow);
+}
+.resume-button ul {
+    margin: 0;
+    padding: 16px 40px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    backface-visibility: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--text);
+}
+.resume-button ul li:not(:first-child) {
+    top: 16px;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.resume-button ul li:nth-child(2) {
+    top: 76px;
+}
+.resume-button ul li:nth-child(3) {
+    top: 136px;
+}
+.resume-button > div {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: var(--rectangle);
+}
+.resume-button > div:before,
+.resume-button > div:after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+.resume-button > div:before {
+    border-radius: 1px;
+    width: 2px;
+    top: 50%;
+    left: 50%;
+    height: 17px;
+    margin: -9px 0 0 -1px;
+    background: var(--arrow);
+}
+.resume-button > div:after {
+    width: 60px;
+    height: 60px;
+    transform-origin: 50% 0;
+    border-radius: 0 0 80% 80%;
+    background: var(--success);
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+}
+.resume-button > div svg {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    margin: -9px 0 0 -10px;
+    fill: none;
+    z-index: 1;
+    stroke-width: 2px;
+    stroke: var(--arrow);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.resume-button.loading ul {
+    animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+.resume-button.loading > div:before {
+    animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+.resume-button.loading > div:after {
+    animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+.resume-button.loading > div svg {
+    animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+
+@keyframes text {
+    10%, 85% {
+        transform: translateY(-100%);
+    }
+    95%, 100% {
+        transform: translateY(-200%);
+    }
+}
+@keyframes line {
+    5%, 10% {
+        transform: translateY(-30px);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    65% {
+        transform: translateY(0);
+    }
+    75%, 100% {
+        transform: translateY(30px);
+    }
+}
+@keyframes svg {
+    0%, 20% {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+    21%, 89% {
+        stroke-dasharray: 26px;
+        stroke-dashoffset: 26px;
+        stroke-width: 3px;
+        margin: -10px 0 0 -10px;
+        stroke: var(--checkmark);
+    }
+    100% {
+        stroke-dasharray: 26px;
+        stroke-dashoffset: 0;
+        margin: -10px 0 0 -10px;
+        stroke: var(--checkmark);
+    }
+    12% {
+        opacity: 1;
+    }
+    20%, 89% {
+        opacity: 0;
+    }
+    90%, 100% {
+        opacity: 1;
+    }
+}
+@keyframes background {
+    10% {
+        transform: scaleY(0);
+    }
+    40% {
+        transform: scaleY(.15);
+    }
+    65% {
+        transform: scaleY(.5);
+        border-radius: 0 0 50% 50%;
+    }
+    75% {
+        border-radius: 0 0 50% 50%;
+    }
+    90%, 100% {
+        border-radius: 0;
+    }
+    75%, 100% {
+        transform: scaleY(1);
+    }
+}
+
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resume-container > div {
+    flex-basis: 100%;
+    width: 0;
+}
+.resume-button {
+    margin: 16px;
+}
+@media(max-width: 400px) {
+    .button {
+        margin: 12px;
+    }
+}
+.dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+}
+.dribbble img {
+    display: block;
+    height: 28px;
+}
+
+
+
   
   /*-----------------------------------*\
     #PORTFOLIO
