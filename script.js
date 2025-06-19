@@ -250,7 +250,7 @@ form.addEventListener('submit', async function (e) {
 
 
 // Resume download button
-const RESUME_PATH = 'assets/Akshita_Resume.pdf';
+const RESUME_PATH = 'files/Akshita-Resume.pdf';
 document.querySelectorAll('.resume-button').forEach(button => {
 
     let duration = 3000,
@@ -280,6 +280,17 @@ document.querySelectorAll('.resume-button').forEach(button => {
         
         e.preventDefault();
 
+        if (e.target.classList.contains('open-file')) {
+            const a = document.createElement('a');
+            a.href = RESUME_PATH;
+            a.download = 'Akshita_Resume.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            return;
+        }
+
+
         if(!button.classList.contains('loading')) {
 
             button.classList.add('loading');
@@ -303,11 +314,10 @@ document.querySelectorAll('.resume-button').forEach(button => {
                     [21, 6]
                 ]);
             }, duration / 2);
-
         }
 
     });
-
+    
 });
 
 function getPoint(point, i, a, smoothing) {

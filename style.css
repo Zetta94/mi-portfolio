@@ -36,6 +36,7 @@
       hsl(45, 100%, 72%), 
       hsl(35, 100%, 68%)
     );
+
   
     /* solid */
   
@@ -1002,21 +1003,20 @@ body.light-mode textarea.form-input:focus {
    * download resume buttons
    */
   
-
-.resume-button.dark {
-    --background: #242836;
-    --rectangle: #1C212E;
-    --arrow: #F5F9FF;
-    --text: #F5F9FF;
-    --success: #4BC793;
+.resume-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
 .resume-button {
-    --background: #000000;
-    --rectangle: var(--orange-yellow-crayola-2);
+    --background: var(--text-gradient-yellow);
+    --rectangle: var(--text-gradient-yellow);
     --success: #4BC793; 
-    --text: #fff;
-    --arrow: #fff;
-    --checkmark: #fff;
+    --text: var(--smoky-black);
+    --arrow: var(--smoky-black);
+    --checkmark: var(--smoky-black);
     --shadow: rgba(10, 22, 50, .24);
     display: flex;
     overflow: hidden;
@@ -1112,6 +1112,9 @@ body.light-mode textarea.form-input:focus {
 }
 .resume-button.loading > div svg {
     animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+.open-file{
+  font-size: small;
 }
 
 @keyframes text {
