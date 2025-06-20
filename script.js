@@ -47,6 +47,27 @@ themeToggleBtn.addEventListener('click', () => {
   }
 });
 
+//code cards snippets
+
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+   const code = btn.parentElement.querySelector('code').innerText;
+     navigator.clipboard.writeText(code);
+     btn.textContent = '✅ Copied';
+     setTimeout(() => (btn.textContent = '📋 Copy'), 1500);
+ });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".reveal-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const container = btn.closest(".flip-container");
+      container.classList.toggle("flipped");
+    });
+  });
+});
+
+
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
