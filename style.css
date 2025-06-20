@@ -205,7 +205,10 @@ body.light-mode textarea.form-input:focus {
   outline: none;
 }
   
-  
+body.light-mode .skills-item .dark-svg {
+    filter: none;
+}
+
   /*-----------------------------------*\
     #RESET
   \*-----------------------------------*/
@@ -1075,7 +1078,10 @@ body.light-mode textarea.form-input:focus {
   /**
    * #tech stack skills
    */
-  
+
+   .skills-item .dark-svg{
+    filter: invert(1) brightness(1);
+   }
    .skills { margin-bottom: 15px; }
   
    .skills-list {
