@@ -47,6 +47,21 @@ themeToggleBtn.addEventListener('click', () => {
   }
 });
 
+//Animated text
+document.addEventListener("DOMContentLoaded", function () {
+  // Safe Typed.js block
+  try {
+    new Typed('.typing-text', {
+      strings: ["Hi! I’m Akshita, running on logic 🧠, caffeine ☕, and Git commits 💻 — in that order."],
+      typeSpeed: 50,
+      backSpeed: 25,
+      showCursor: false,
+      loop: true
+    });
+  } catch (e) {
+    console.warn("Typed.js failed:", e);
+  }
+});
 //code cards snippets
 
 document.querySelectorAll('.copy-btn').forEach(btn => {
