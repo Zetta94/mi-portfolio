@@ -701,6 +701,8 @@ body.light-mode .skills-item .dark-svg {
   max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-content: center;
+  justify-content: center;
   gap: 1.5rem;
 }
 
