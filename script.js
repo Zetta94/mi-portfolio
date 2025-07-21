@@ -23,11 +23,11 @@ const savedTheme = localStorage.getItem('theme');
 function setTheme(mode) {
   if (mode === 'light') {
     document.body.classList.add('light-mode');
-    themeToggleIcon.textContent = 'Visibility mode 🌙';
+    themeToggleIcon.textContent = 'Modo Oscuro 🌙';
     localStorage.setItem('theme', 'light');
   } else {
     document.body.classList.remove('light-mode');
-    themeToggleIcon.textContent = 'Visibility mode 🌞';
+    themeToggleIcon.textContent = 'Modo Claro 🌞';
     localStorage.setItem('theme', 'dark');
   }
 }
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Safe Typed.js block
   try {
     new Typed('.typing-text', {
-      strings: ["Hi! I’m Akshita, running on logic 🧠, caffeine ☕, and Git commits 💻 — in that order."],
+      strings: ["Soy Manuel, funciono a base de lógica 🧠, cafeína ☕ y commits en Git 💻 — en ese orden."],
       typeSpeed: 50,
       backSpeed: 25,
       showCursor: false,
@@ -223,9 +223,9 @@ function validateInput(input) {
   const errorMsg = input.nextElementSibling;
   if (!input.validity.valid) {
     if (input.validity.valueMissing) {
-      errorMsg.textContent = 'This field is required';
+      errorMsg.textContent = 'Este campo es obligatorio';
     } else if (input.validity.typeMismatch) {
-      errorMsg.textContent = 'Enter a valid email';
+      errorMsg.textContent = 'Ingrese un email válido';
     }
     return false;
   } else {
@@ -256,7 +256,7 @@ form.addEventListener('submit', async function (e) {
   paperPlaneIcon.style.transition = 'transform 2s ease-in-out';
 
   setTimeout(() => {
-    formBtn.innerText = "Sending...";
+    formBtn.innerText = "Enviando...";
   }, 100);
 
   try {
@@ -272,21 +272,21 @@ form.addEventListener('submit', async function (e) {
     }, 2000);
 
     if (response.ok) {
-      formBtn.innerText = "Message Sent";
-      showToast("Your message has been sent!");
+      formBtn.innerText = "Mensaje enviado";
+      showToast("¡Su mensaje ha sido enviado con éxito!");
       form.reset();
       formBtn.setAttribute("disabled", "");
     } else {
-      showToast("There was a problem submitting your form.");
+      showToast("Existe un problema al enviar su mensaje. Por favor, inténtelo de nuevo más tarde.");
     }
   } catch (error) {
-    showToast("Network error. Please try again.");
+    showToast("Error al enviar el mensaje. Por favor, inténtelo de nuevo más tarde.");
   }
 });
 
 
 // Resume download button
-const RESUME_PATH = 'files/Akshita-Resume.pdf';
+const RESUME_PATH = 'files\CV-Manuel-Zuñiga-Desarrollador-de-Software.pdf';
 document.querySelectorAll('.resume-button').forEach(button => {
 
     let duration = 3000,
@@ -319,7 +319,7 @@ document.querySelectorAll('.resume-button').forEach(button => {
         if (e.target.classList.contains('open-file')) {
             const a = document.createElement('a');
             a.href = RESUME_PATH;
-            a.download = 'Akshita_Resume.pdf';
+            a.download = 'CV-Manuel-Zuñiga-Desarrollador-de-Software.pdf';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
