@@ -148,7 +148,7 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
     const itemCategory = filterItems[i].dataset.category.toLowerCase();
-    if (selectedValue === "all") {
+    if (selectedValue === "todas") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === itemCategory) {
       filterItems[i].classList.add("active");
