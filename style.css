@@ -1186,6 +1186,9 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-left: 1rem;
+  list-style-type: disc;
+  padding-left: 1rem;
 }
 
 
@@ -1219,13 +1222,18 @@ main {
 
 .skills-item {
   min-width: 20%;
+  text-align: center;
+  padding: 0.9rem;
   scroll-snap-align: start;
 }
 
 .skills-item img {
-  width: 50%;
-  filter: grayscale(0);
-  transition: var(--transition-1);
+  width: 90px;
+  /* o el tamaño que prefieras */
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .skills-item p {
