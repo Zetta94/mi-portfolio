@@ -285,106 +285,76 @@ form.addEventListener('submit', async function (e) {
 });
 
 
-// Ruta del archivo CV
-const RESUME_PATH = './files/cv-manuel-zuniga-desarrollador-de-software.pdf';
-
-// Generador de curva SVG
-function getPath(y, smoothing, points = null) {
-  const defaultPoints = [
-    [4, y],
-    [12, y],
-    [20, y]
-  ];
-
-  const finalPoints = points || defaultPoints;
-
-  const line = (pointA, pointB) => {
-    const lengthX = pointB[0] - pointA[0];
-    const lengthY = pointB[1] - pointA[1];
-
-    const controlPoint = [
-      pointA[0] + lengthX * smoothing,
-      pointA[1] + lengthY * smoothing
-    ];
-
-    return `Q ${controlPoint[0]},${controlPoint[1]} ${pointB[0]},${pointB[1]}`;
-  };
-
-  return `
-    <path d="M ${finalPoints[0][0]},${finalPoints[0][1]}
-      ${line(finalPoints[0], finalPoints[1])}
-      ${line(finalPoints[1], finalPoints[2])}" 
-      fill="none" stroke="white" stroke-width="2"/>
-  `;
-}
-
+// Resume download button
+const RESUME_PATH = 'files/CV-Manuel-Zuñiga-Desarrollador-de-Software.pdf';
 document.querySelectorAll('.resume-button').forEach(button => {
 
-  const duration = 3000;
-  const svg = button.querySelector('svg');
-  if (!svg) return;
+    let duration = 3000,
+        svg = button.querySelector('svg'),
+        svgPath = new Proxy({
+            y: null,
+            smoothing: null
+        }, {
+            set(target, key, value) {
+                target[key] = value;
+                if(target.y !== null && target.smoothing !== null) {
+                    svg.innerHTML = getPath(target.y, target.smoothing, null);
+                }
+                return true;
+            },
+            get(target, key) {
+                return target[key];
+            }
+        });
 
-  const svgPath = new Proxy({
-    y: null,
-    smoothing: null
-  }, {
-    set(target, key, value) {
-      target[key] = value;
-      if (target.y !== null && target.smoothing !== null) {
-        svg.innerHTML = getPath(target.y, target.smoothing, null);
-      }
-      return true;
-    },
-    get(target, key) {
-      return target[key];
-    }
-  });
+    button.style.setProperty('--duration', duration);
 
-  button.style.setProperty('--duration', duration + 'ms');
+    svgPath.y = 20;
+    svgPath.smoothing = 0;
 
-  svgPath.y = 20;
-  svgPath.smoothing = 0;
+    button.addEventListener('click', e => {
+        
+        e.preventDefault();
 
-  button.addEventListener('click', e => {
-    e.preventDefault();
+        if (e.target.classList.contains('open-file')) {
+            const a = document.createElement('a');
+            a.href = RESUME_PATH;
+            a.download = 'CV-Manuel-Zuñiga-Desarrollador-de-Software.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            return;
+        }
 
-    if (e.target.classList.contains('open-file')) {
-      const a = document.createElement('a');
-      a.href = RESUME_PATH;
-      a.download = 'cv-manuel-zuniga-desarrollador-de-software.pdf';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      return;
-    }
 
-    if (!button.classList.contains('loading')) {
-      button.classList.add('loading');
+        if(!button.classList.contains('loading')) {
 
-      gsap.to(svgPath, {
-        smoothing: 0.3,
-        duration: duration * 0.065 / 1000
-      });
+            button.classList.add('loading');
 
-      gsap.to(svgPath, {
-        y: 12,
-        duration: duration * 0.265 / 1000,
-        delay: duration * 0.065 / 1000,
-        ease: "elastic.out(1.12, 0.4)"
-      });
+            gsap.to(svgPath, {
+                smoothing: .3,
+                duration: duration * .065 / 1000
+            });
 
-      setTimeout(() => {
-        svg.innerHTML = getPath(0, 0, [
-          [3, 14],
-          [8, 19],
-          [21, 6]
-        ]);
-      }, duration / 2);
-    }
+            gsap.to(svgPath, {
+                y: 12,
+                duration: duration * .265 / 1000,
+                delay: duration * .065 / 1000,
+                ease: Elastic.easeOut.config(1.12, .4)
+            });
 
-  });
+            setTimeout(() => {
+                svg.innerHTML = getPath(0, 0, [
+                    [3, 14],
+                    [8, 19],
+                    [21, 6]
+                ]);
+            }, duration / 2);
+        }
+
+    });
+    
 });
-
 
 function getPoint(point, i, a, smoothing) {
     let cp = (current, previous, next, reverse) => {
