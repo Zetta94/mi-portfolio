@@ -1,0 +1,187 @@
+.sidebar-section-title {
+    color: rgba(226, 232, 240, 0.62);
+    font-size: 11px;
+    font-weight: var(--fw-600);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.contacts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.contact-item {
+    min-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+.contact-info {
+    max-width: calc(100% - 46px);
+    width: calc(100% - 46px);
+}
+
+.contact-title {
+    color: rgba(226, 232, 240, 0.5);
+    font-size: 11px;
+    font-weight: var(--fw-600);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.contact-info :is(.contact-link, time, address) {
+    color: var(--white-2);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contact-info p {
+    color: var(--white-2);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contact-info address {
+    font-style: normal;
+}
+
+.social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 4px;
+    padding-left: 0;
+}
+
+.social-item .social-link {
+    color: var(--light-gray-70);
+    font-size: 22px;
+    min-height: 42px;
+    min-width: 48px;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.36);
+    border: 1px solid rgba(148, 163, 184, 0.08);
+    transition: color var(--transition-1), border-color var(--transition-1), background var(--transition-1), transform var(--transition-1);
+}
+
+.social-item .social-link:hover {
+    color: var(--light-gray);
+    background: rgba(30, 41, 59, 0.72);
+    border-color: rgba(94, 234, 212, 0.16);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 767px) {
+    .sidebar .sidebar-info_more {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 0;
+    }
+
+    .sidebar .sidebar-info_more .sidebar-section-title,
+    .sidebar .sidebar-info_more .separator,
+    .sidebar .sidebar-info_more .contacts-list,
+    .sidebar .sidebar-info_more .contact-item,
+    .sidebar .sidebar-info_more .contact-info,
+    .sidebar .sidebar-info_more .contact-title,
+    .sidebar .sidebar-info_more .icon-box {
+        display: none !important;
+    }
+
+    .sidebar .sidebar-info_more .social-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 580px) {
+    .separator {
+        margin: 32px 0;
+    }
+
+    .contacts-list {
+        gap: 20px;
+    }
+
+    .contact-info {
+        max-width: calc(100% - 64px);
+        width: calc(100% - 64px);
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacts-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .contact-item {
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: rgba(15, 23, 42, 0.34);
+        border: 1px solid rgba(148, 163, 184, 0.08);
+    }
+
+    .contact-info {
+        max-width: calc(100% - 62px);
+        width: calc(100% - 62px);
+    }
+
+    .contact-info :is(.contact-link, time, address) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
+    .social-list {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .contacts-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info :is(.contact-link) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .contact-info :is(.contact-link, time, address) {
+        --fs-7: 14px;
+        font-weight: var(--fw-300);
+    }
+
+    .separator:last-of-type {
+        margin: 15px 0;
+        opacity: 1;
+    }
+
+    .social-list {
+        justify-content: center;
+    }
+}

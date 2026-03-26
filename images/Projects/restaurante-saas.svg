@@ -1,0 +1,27 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F3F4F6"/>
+  <path d="M130 740C294 602 539 538 794 564C918 577 1025 616 1093 661" stroke="#2563EB" stroke-width="30" stroke-linecap="round"/>
+  <rect x="123" y="141" width="395" height="514" rx="40" fill="#0F2C5F"/>
+  <rect x="145" y="161" width="351" height="474" rx="28" fill="#1D4ED8"/>
+  <rect x="171" y="218" width="300" height="188" rx="20" fill="#DBEAFE"/>
+  <path d="M208 455H432" stroke="#93C5FD" stroke-width="22" stroke-linecap="round"/>
+  <path d="M208 503H406" stroke="#93C5FD" stroke-width="18" stroke-linecap="round"/>
+  <path d="M208 549H374" stroke="#93C5FD" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="321" cy="306" r="90" fill="#F59E0B"/>
+  <path d="M258 317C284 278 344 277 382 314" stroke="#FFF7ED" stroke-width="14" stroke-linecap="round"/>
+  <path d="M270 357C294 378 344 379 370 356" stroke="#92400E" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="289" cy="320" r="9" fill="#1F2937"/>
+  <circle cx="353" cy="320" r="9" fill="#1F2937"/>
+  <path d="M251 246C245 198 270 157 320 147C368 158 396 198 389 245" fill="#FFFFFF"/>
+  <path d="M242 249C249 174 283 126 320 118C357 127 394 174 399 249" stroke="#1E3A8A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M228 387C257 448 382 449 414 390V583H228V387Z" fill="#2563EB"/>
+  <rect x="510" y="452" width="382" height="256" rx="26" fill="#C084FC" fill-opacity="0.15" stroke="#A855F7" stroke-opacity="0.18" stroke-width="8"/>
+  <rect x="556" y="496" width="290" height="168" rx="18" fill="#111827"/>
+  <path d="M605 557L647 596L734 511" stroke="#84CC16" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="772" y="507" width="212" height="208" rx="24" fill="#D97706"/>
+  <rect x="806" y="464" width="45" height="69" rx="18" fill="#60A5FA"/>
+  <rect x="865" y="487" width="58" height="42" rx="12" fill="#F59E0B"/>
+  <rect x="932" y="450" width="27" height="86" rx="12" fill="#65A30D"/>
+  <path d="M784 523L1006 523" stroke="#92400E" stroke-width="10" stroke-linecap="round"/>
+  <text x="112" y="830" fill="#0F172A" font-family="Poppins, Arial, sans-serif" font-size="72" font-weight="700">Restaurante SaaS</text>
+</svg>
