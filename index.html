@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manuel Zuñiga - Portfolio Personal</title>
+  <title>Manuel Zuñiga | Backend Developer</title>
+  <meta name="description"
+    content="Portfolio profesional de Manuel Zuñiga, desarrollador backend especializado en Node.js, TypeScript, APIs, bases de datos y arquitectura de software.">
+  <meta name="theme-color" content="#081120">
+  <meta property="og:title" content="Manuel Zuñiga | Backend Developer">
+  <meta property="og:description"
+    content="Desarrollo backend orientado a producto, APIs escalables, integraciones y mantenimiento evolutivo.">
+  <meta property="og:type" content="website">
 
   <!--
     - favicon
@@ -16,6 +23,11 @@
     - custom css link
   -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/motion.css">
   <!--
     - skills logo link
   -->
@@ -49,30 +61,41 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="images/perfil.jpg" alt="Manuel Zuñiga" width="80" class="avatar-static">
-          <img src="images/perfil.jpg" alt="Manuel Zuñiga GIF" width="80" class="avatar-gif">
-        </figure>
-
-        <div class="info-content">
+        <div class="sidebar-identity">
           <h1 class="name" title="Manuel Zuñiga">Manuel Zuñiga</h1>
 
-          <p class="title">Desarrollador Full Stack Especializado en Backend</p>
+          <figure class="avatar-box">
+            <img src="images/Perfil2.png" alt="Manuel Zuñiga" width="80" class="avatar-static">
+          </figure>
+
+          <div class="info-content">
+            <p class="sidebar-kicker">Backend Developer</p>
+            <p class="sidebar-summary">Desarrollo backend orientado a producto, mantenimiento evolutivo e integraciones
+              confiables.</p>
+          </div>
         </div>
 
-        <button class="info_more-btn" id="contact-toggle" data-sidebar-btn>
-          <span>Ver contactos ☎️</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <div class="sidebar-pills">
+          <span class="availability-badge">Disponible para nuevos desafíos</span>
+        </div>
 
-        <button class="info_more-btn" id="theme-toggle" aria-label="Toggle dark/light mode" data-sidebar-btn>
-          <span id="theme-toggle-icon">Modo de visibilidad 🌙</span>
+        <div class="sidebar-actions">
+          <a href="https://wa.me/5492664920868?text=Hola%20Manuel%2C%20vi%20tu%20portfolio%20y%20quiero%20hablar%20contigo."
+            target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary sidebar-cta">Hablemos</a>
+          <a href="files/Currículum Manuel Zuñiga 2026.pdf" class="cta-btn cta-btn-secondary sidebar-cta"
+            download>Descargar CV</a>
+        </div>
+
+        <button class="info_more-btn" id="contact-toggle" data-sidebar-btn aria-expanded="false">
+          <span>Ver contacto</span>
+          <ion-icon name="chevron-down"></ion-icon>
         </button>
 
       </div>
 
       <div class="sidebar-info_more">
+
+        <p class="sidebar-section-title">Contacto</p>
 
         <div class="separator"></div>
 
@@ -107,28 +130,12 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Nacimiento</p>
-
-              <time datetime="1994-10-21">21 Octubre, 1994</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">LOCALIZACIÓN</p>
-              <a href="https://www.google.com/maps/place/San+Luis,+Argentina" target="_blank" class="contact-link">
-                <address>San Luis, Argentina</address>
-              </a>
+              <p class="contact-title">Ubicación</p>
+              <address class="contact-link">San Luis, Argentina</address>
             </div>
 
           </li>
@@ -138,122 +145,141 @@
         <div class="separator"></div>
 
         <ul class="social-list">
-
           <li class="social-item">
-            <a href="https://github.com/Zetta94" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <!-- <li class="social-item">
-            <a href="https://www.figma.com/@Manuel sood" class="social-link">
-              <ion-icon name="logo-figma"></ion-icon>
-            </a>
-          </li> -->
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/manuzetta94/" class="social-link">
+            <a href="https://www.linkedin.com/in/manuzetta94/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
-            <a href="files/CV-Manuel-Zuñiga-Desarrollador-de-Software.pdf" class="social-link" title="Descargar CV"
-              download>
-              <ion-icon name="download-outline"></ion-icon>
-              <span style="margin-left: 6px; font-size: 9px;">Descargar CV</span>
+            <a href="https://github.com/Zetta94" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
-          <!-- <li class="social-item">
-            <a href="https://x.com/Manuel _sood08" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+          <li class="social-item">
+            <a href="https://wa.me/5492664920868" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="WhatsApp">
+              <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
-          </li> -->
-
+          </li>
         </ul>
-
 
       </div>
 
     </aside>
 
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
     <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
 
       <nav class="navbar">
 
         <ul class="navbar-list">
-
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Perfil</button>
+            <button class="navbar-link active" data-nav-link aria-label="Perfil">
+              <ion-icon class="navbar-icon" name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="navbar-label">Perfil</span>
+            </button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Experiencia</button>
+            <button class="navbar-link" data-nav-link aria-label="Experiencia">
+              <ion-icon class="navbar-icon" name="briefcase-outline" aria-hidden="true"></ion-icon>
+              <span class="navbar-label">Experiencia</span>
+            </button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Certificaciones</button>
+            <button class="navbar-link" data-nav-link aria-label="Certificaciones">
+              <ion-icon class="navbar-icon" name="ribbon-outline" aria-hidden="true"></ion-icon>
+              <span class="navbar-label">Certificaciones</span>
+            </button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Proyectos</button>
+            <button class="navbar-link" data-nav-link aria-label="Proyectos">
+              <ion-icon class="navbar-icon" name="layers-outline" aria-hidden="true"></ion-icon>
+              <span class="navbar-label">Proyectos</span>
+            </button>
           </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blogs</button>
-          </li> -->
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contacto</button>
+            <button class="navbar-link" data-nav-link aria-label="Contacto">
+              <ion-icon class="navbar-icon" name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+              <span class="navbar-label">Contacto</span>
+            </button>
           </li>
-
         </ul>
 
+        <button class="navbar-theme-toggle" id="theme-toggle" aria-label="Cambiar tema visual" type="button">
+          <span id="theme-toggle-icon">Tema oscuro</span>
+        </button>
+
       </nav>
-
-
-
-
 
       <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="perfil">
+      <article class="about active" data-page="perfil">
 
         <header>
           <h2 class="h2 article-title">Perfil</h2>
         </header>
 
+        <section class="professional-intro">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-meta-row">
+                <p class="section-badge">Backend Developer</p>
+                <p class="hero-availability">Node.js · TypeScript · SQL/NoSQL</p>
+              </div>
+
+              <h3 class="hero-title">Backend orientado a producto, APIs robustas y software mantenible.</h3>
+
+              <p class="hero-lead">
+                Diseño y desarrollo servicios para aplicaciones web y mobile, con foco en claridad técnica, evolución
+                estable del producto y buena colaboración con el equipo.
+              </p>
+
+              <div class="hero-actions">
+                <a href="https://wa.me/5492664920868?text=Hola%20Manuel%2C%20vi%20tu%20portfolio%20y%20quiero%20hablar%20contigo."
+                  target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">Escribirme</a>
+                <button class="cta-btn cta-btn-secondary" type="button" data-nav-target="proyectos">Ver
+                  proyectos</button>
+              </div>
+            </div>
+
+            <div class="hero-panel">
+              <p class="hero-panel-label">Forma de aportar valor</p>
+
+              <ul class="profile-highlights">
+                <li class="highlight-card">
+                  <strong>Arquitectura y APIs</strong>
+                  <span>Servicios e integraciones pensadas para crecer con orden y bajo acoplamiento.</span>
+                </li>
+                <li class="highlight-card">
+                  <strong>Datos con criterio</strong>
+                  <span>Modelado SQL y NoSQL con foco en consistencia, rendimiento y mantenimiento.</span>
+                </li>
+                <li class="highlight-card">
+                  <strong>Ejecución en equipo</strong>
+                  <span>Trabajo fluido con producto, frontend, diseño y QA para entregar con claridad.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <section class="about-text">
           <span class="typing-text"></span>
           <p>
-            Soy un desarrollador backend apasionado por la tecnología y por crear soluciones que resuelvan problemas
-            reales.<br><br>
-            Me considero una persona curiosa, proactiva y en constante aprendizaje. Disfruto combinar lógica, diseño y
-            desarrollo para convertir ideas en productos útiles y escalables.<br><br>
-            Tengo una base sólida en teoría, pero lo que realmente me define es la práctica, el compromiso con cada
-            proyecto y las ganas de seguir creciendo profesionalmente.<br><br>
-            Además de la programación, me apasionan la física, la química y el deporte. Siempre me motivó la idea de
-            vincular la tecnología con estas áreas, especialmente con el mundo deportivo.<br>
-            Creo firmemente que la tecnología puede potenciar el rendimiento, la salud y la experiencia en múltiples
-            disciplinas, y me gustaría seguir explorando ese camino.
+            Soy un desarrollador orientado a backend con experiencia construyendo soluciones para contextos reales de
+            negocio. Me interesa especialmente resolver problemas de arquitectura, rendimiento, mantenibilidad y
+            evolución de producto.<br><br>
+            Aunque puedo moverme con soltura en entornos full stack, mi mayor valor está en diseñar servicios sólidos,
+            modelar datos con criterio y asegurar que cada funcionalidad sea técnicamente confiable.<br><br>
+            Me caracterizo por trabajar con responsabilidad, comunicación clara y aprendizaje continuo. Busco
+            proyectos
+            donde la calidad técnica tenga impacto directo en la experiencia del usuario y en el crecimiento del
+            producto.
           </p>
         </section>
-
 
 
         <!--
@@ -261,8 +287,9 @@
         -->
 
         <section class="service">
+          <div class="select-value" data-selecct-value>Todas</div>
 
-          <h3 class="h3 service-title">💡 Conoce mis habilidades...</h3>
+          <h3 class="h3 service-title">Áreas de especialidad</h3>
 
           <ul class="service-list">
 
@@ -273,10 +300,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Desarrollo Web</h4>
+                <h4 class="h4 service-item-title">Arquitectura backend</h4>
 
                 <p class="service-item-text">
-                  Transformando ideas en experiencias funcionales: construirSitio(visiónDelUsuario);
+                  Diseño servicios y capas de negocio pensadas para crecer con orden, legibilidad y bajo acoplamiento.
                 </p>
               </div>
 
@@ -289,10 +316,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Diseño UI/UX</h4>
+                <h4 class="h4 service-item-title">APIs e integraciones</h4>
 
                 <p class="service-item-text">
-                  Diseñando experiencias, no solo pantallas: crearFlujo(usuarioPrimero);
+                  Desarrollo endpoints, reglas de negocio e integraciones confiables para productos web y mobile.
                 </p>
               </div>
 
@@ -305,10 +332,11 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Ciencia de Datos</h4>
+                <h4 class="h4 service-item-title">Modelado de datos</h4>
 
                 <p class="service-item-text">
-                  Del dato a la decisión: datos.limpiar().analizar().visualizar();
+                  Trabajo con SQL y NoSQL priorizando consistencia, rendimiento y estructuras que acompañen al
+                  dominio.
                 </p>
               </div>
 
@@ -321,11 +349,11 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Gestión de Bases de Datos</h4>
+                <h4 class="h4 service-item-title">Mantenimiento evolutivo</h4>
 
                 <p class="service-item-text">
-                  Dominando SQL y NoSQL :
-                  SELECT * FROM creatividad ORDER BY impacto;
+                  Mejoro sistemas existentes sin perder estabilidad, reduciendo deuda técnica y cuidando la
+                  continuidad.
                 </p>
               </div>
 
@@ -338,10 +366,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Computing</h4>
+                <h4 class="h4 service-item-title">Cloud y despliegues</h4>
 
                 <p class="service-item-text">
-                  Desplegando soluciones escalables con herramientas cloud: nube.desplegar(proyectos.sinFricciones);
+                  Acompaño el ciclo completo hasta entornos productivos con foco en trazabilidad y operación estable.
                 </p>
               </div>
 
@@ -354,42 +382,11 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Internet de las Cosas</h4>
+                <h4 class="h4 service-item-title">Trabajo colaborativo</h4>
 
                 <p class="service-item-text">
-                  Conectando el mundo físico con el digital : conectar(sensor).a(realidad);
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item hover">
-
-              <div class="service-icon-box">
-                <img src="images/icons/blockchain.png" alt="blockchain icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Blockchain</h4>
-
-                <p class="service-item-text">
-                  Aplicaciones descentralizadas, seguras y transparentes : desplegar(smartContract);
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item hover">
-
-              <div class="service-icon-box">
-                <img src="images/icons/project-management.png" alt="Project Management" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Gestión de Proyectos</h4>
-
-                <p class="service-item-text">
-                  Tecnología con organización y enfoque en entregables : organizar(tareas).ejecutar().entregar();
+                  Me integro bien con producto, frontend, diseño y QA para convertir requerimientos en entregas
+                  útiles.
                 </p>
               </div>
 
@@ -424,152 +421,48 @@
       -->
 
         <section class="code-snippets">
-          <h2 class="h3">🎯 Un poco más de mí</h2>
-          <br>
+          <h2 class="h3">Forma de trabajo</h2>
 
-          <div class="code-notes">
+          <div class="principles-grid">
+            <article class="principle-card">
+              <span class="principle-index">01</span>
+              <h3>Pienso desde el problema</h3>
+              <p>Antes de escribir código, ordeno el contexto, las restricciones del negocio y el impacto esperado.
+              </p>
+            </article>
 
-            <div class="code-card flip-container">
-              <div class="flipper">
-                <!-- Front side -->
-                <div class="front">
-                  <h3 class="card-heading">¿ Hack de Productividad ?</h3>
-                  <button class="reveal-btn">Revelar</button>
-                </div>
+            <article class="principle-card">
+              <span class="principle-index">02</span>
+              <h3>Priorizo claridad técnica</h3>
+              <p>Busco soluciones mantenibles, legibles y fáciles de evolucionar por cualquier integrante del equipo.
+              </p>
+            </article>
 
-                <!-- Back side -->
-                <div class="back">
-                  <div class="code-lang">Typescript</div>
-                  <button class="copy-btn">📋 Copy</button>
-                  <pre><code>
-  if (tarea === 'Type.Importante') {
-    enfoque_profundo(tarea)
-  } else {
-    archivar(tarea)
-  }
+            <article class="principle-card">
+              <span class="principle-index">03</span>
+              <h3>Entrego con foco en producto</h3>
+              <p>No me limito a implementar tareas: intento entender el porqué detrás de cada funcionalidad.</p>
+            </article>
 
-          </code></pre>
-                </div>
-              </div>
-            </div>
+            <article class="principle-card">
+              <span class="principle-index">04</span>
+              <h3>Aprendo de forma continua</h3>
+              <p>Me mantengo en evolución constante para tomar mejores decisiones técnicas y aportar más valor.</p>
+            </article>
 
-            <div class="code-card flip-container">
-              <div class="flipper">
-                <!-- Front side -->
-                <div class="front">
-                  <h3 class="card-heading">¿ Cómo busco la perfección en mi trabajo ?</h3>
-                  <button class="reveal-btn">Revelar</button>
-                </div>
+            <article class="principle-card">
+              <span class="principle-index">05</span>
+              <h3>Cuido la base de datos</h3>
+              <p>Pienso el modelado, las consultas y la integridad de los datos como una parte central de la calidad del
+                producto.</p>
+            </article>
 
-                <!-- Back side -->
-                <div class="back">
-                  <div class="code-lang">php</div>
-                  <button class="copy-btn">📋 Copy</button>
-                  <pre><code>
-  function buscarPerfeccion($codigo) {
-    while (!$codigo->esPerfecto()) {
-        $codigo->mejorar();
-    }
-    return $codigo;
-  } 
-          </code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div class="code-card flip-container">
-              <div class="flipper">
-                <!-- Front side -->
-                <div class="front">
-                  <h3 class="card-heading">¿ Mi kit esencial de desarrollo ?</h3>
-                  <button class="reveal-btn">Revelar</button>
-                </div>
-
-                <!-- Back side -->
-                <div class="back">
-                  <div class="code-lang">c++</div>
-                  <button class="copy-btn">📋 Copy</button>
-                  <pre><code>
-  class Toolbox {
-    public:
-      std::vector<std::string> esenciales = {
-        "VSCode", "Postman", "GitHub"
-      };
-  };
-          </code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div class="code-card flip-container">
-              <div class="flipper">
-                <!-- Front side -->
-                <div class="front">
-                  <h3 class="card-heading">Cuando entro en modo "Trabajador obsesivo"...</h3>
-                  <button class="reveal-btn">Revelar</button>
-                </div>
-
-                <!-- Back side -->
-                <div class="back">
-                  <div class="code-lang">js</div>
-                  <button class="copy-btn">📋 Copy</button>
-                  <pre><code>
-  try {
-    tomarDescanso();
-    hidratar();
-  } catch (burnout) {
-    setTimeout(() => resetMental(), 5000);
-  }
-          </code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div class="code-card flip-container">
-              <div class="flipper">
-                <!-- Front side -->
-                <div class="front">
-                  <h3 class="card-heading"> ¿ Equilibrio vida-trabajo ?</h3>
-                  <button class="reveal-btn">Revelar</button>
-                </div>
-
-                <!-- Back side -->
-                <div class="back">
-                  <div class="code-lang">css</div>
-                  <button class="copy-btn">📋 Copy</button>
-                  <pre><code>
-  .dev-life {
-    trabajo: 65%;
-    descanso: 35%;
-    overflow: hidden;
-  }
-          </code></pre>
-                </div>
-              </div>
-            </div>
-
-            <div class="code-card flip-container">
-              <div class="flipper">
-                <!-- Front side -->
-                <div class="front">
-                  <h3 class="card-heading">¡ Subiendo de nivel !</h3>
-                  <button class="reveal-btn">Revelar</button>
-                </div>
-
-                <!-- Back side -->
-                <div class="back">
-                  <div class="code-lang">java</div>
-                  <button class="copy-btn">📋 Copy</button>
-                  <pre><code>
-  while (!experto) {
-    seguirAprendiendo();
-    System.out.println("Creciendo...");
-  }
-          </code></pre>
-                </div>
-              </div>
-            </div>
-
+            <article class="principle-card">
+              <span class="principle-index">06</span>
+              <h3>Uso IA con criterio</h3>
+              <p>La aprovecho para acelerar análisis, prototipos y documentación, sin delegar el criterio técnico ni la
+                decisión final.</p>
+            </article>
           </div>
         </section>
 
@@ -757,28 +650,114 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title" style="display: flex; align-items: center; gap: 6px;">
-                Backend Developer Jr/Ssr - Gravitad
+                Desarrollador Backend - Deuxit
+                <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags/svg/ar.svg" alt="Argentina"
+                  title="Argentina" style="width: 20px; height: 14px;" />
+              </h4>
+
+              <span>Santa Fe, Argentina · 09/2025 — Actualidad</span>
+
+              <ul class="timeline-text">
+                <li>
+                  <p>Trabajo con Oracle, PostgreSQL, SQL Server y MongoDB, optimizando consultas SQL en producción.
+                  </p>
+                </li>
+                <li>
+                  <p>Analizo performance y resuelvo errores de integridad, joins y tipos de datos en bases
+                    productivas.
+                  </p>
+                </li>
+                <li>
+                  <p>Desarrollo APIs y servicios backend con Node.js, NestJS, Express y TypeScript.</p>
+                </li>
+                <li>
+                  <p>Integro sistemas mediante APIs REST, RabbitMQ y procesamiento en tiempo real con Socket.IO.</p>
+                </li>
+                <li>
+                  <p>Implemento scripts de automatización y procesos batch con cron jobs y node-cron.</p>
+                </li>
+                <li>
+                  <p>Participo en diseño de arquitectura sobre entornos monolíticos y de microservicios.</p>
+                </li>
+                <li>
+                  <p>Contenerizo servicios con Docker, orquesto con Docker Compose e implemento testing con Jest y
+                    Supertest.</p>
+                </li>
+                <li>
+                  <p>Trabajo con pipelines CI/CD y control de versiones usando Git y Bitbucket.</p>
+                </li>
+              </ul>
+
+              <div class="timeline-projects">
+                <p class="timeline-projects-title">Proyectos dentro de Deuxit</p>
+
+                <section class="timeline-project">
+                  <h5 class="timeline-project-name">La Segunda Seguros · Proyecto OLA</h5>
+                  <ul class="timeline-text">
+                    <li>
+                      <p>Desarrollo de APIs backend con NestJS y TypeORM sobre Oracle Database.</p>
+                    </li>
+                    <li>
+                      <p>Implementación de lógica de negocio y validaciones mediante DTOs.</p>
+                    </li>
+                    <li>
+                      <p>Optimización de consultas SQL y análisis de impacto sobre estructuras y procesos existentes.
+                      </p>
+                    </li>
+                    <li>
+                      <p>Resolución de errores en producción relacionados con integridad de datos y problemas de
+                        performance.</p>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="timeline-project">
+                  <h5 class="timeline-project-name">ESG Utilities · Proyecto OPTIMUM</h5>
+                  <ul class="timeline-text">
+                    <li>
+                      <p>Desarrollo y mantenimiento de una plataforma con arquitectura híbrida Node.js + PHP.</p>
+                    </li>
+                    <li>
+                      <p>Integración con MongoDB, SQL Server, Oracle y PostgreSQL.</p>
+                    </li>
+                    <li>
+                      <p>Implementación de procesos asincrónicos con RabbitMQ y comunicación en tiempo real.</p>
+                    </li>
+                    <li>
+                      <p>Desarrollo de funcionalidades frontend con Vue.js orientadas a visualización y reporting.</p>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" style="display: flex; align-items: center; gap: 6px;">
+                Desarrollador Backend - Gravitad
                 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags/svg/es.svg" alt="España" title="España"
                   style="width: 20px; height: 14px;" />
               </h4>
 
-              <span>08/2024 — Actualidad</span>
+              <span>Canarias, España · 12/2023 — 08/2025</span>
 
               <ul class="timeline-text">
                 <li>
-                  <p>👉 Diseñé y desarrollé soluciones de software con Node.js, optimizando la eficiencia y el
-                    rendimiento de las aplicaciones en web y mobile.</p>
+                  <p>Diseñé y desarrollé soluciones backend con Node.js, optimizando el rendimiento de aplicaciones
+                    web.
+                  </p>
                 </li>
                 <li>
-                  <p>👉 Implementé nuevas funcionalidades y realicé mejoras en sistemas existentes, asegurando su
-                    estabilidad y escalabilidad.</p>
+                  <p>Implementé nuevas funcionalidades y mejoras en sistemas existentes, asegurando estabilidad y
+                    escalabilidad.</p>
                 </li>
                 <li>
-                  <p>👉 Brindé soporte técnico para la integración y mantenimiento de los servicios.</p>
+                  <p>Brindé soporte técnico para integración y mantenimiento de servicios.</p>
                 </li>
                 <li>
-                  <p>👉 Participé en proyectos bajo metodologías ágiles, colaborando con equipos de frontend, diseño y
-                    QA.</p>
+                  <p>Participé en proyectos bajo metodologías ágiles, colaborando con equipos de frontend, diseño y
+                    QA.
+                  </p>
                 </li>
               </ul>
             </li>
@@ -786,34 +765,32 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title" style="display: flex; align-items: center; gap: 6px;">
-                Full Stack Developer Jr - Andrómeda
+                Desarrollador Full Stack - Andrómeda
                 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags/svg/ar.svg" alt="Argentina"
                   title="Argentina" style="width: 20px; height: 14px;" />
               </h4>
 
-              <span>04/2023 — 10/2023</span>
+              <span>San Luis, Argentina · 12/2023 — 08/2025</span>
 
               <ul class="timeline-text">
                 <li>
-                  <p>👉 Lideré el desarrollo y mantenimiento de una aplicación móvil educativa para escuelas, utilizando
-                    React Native y Node.js.</p>
+                  <p>Lideré el desarrollo y mantenimiento de una aplicación móvil educativa usando React, React
+                    Native,
+                    Node.js y Laravel.</p>
                 </li>
                 <li>
-                  <p>👉 Me encargué de gestionar la evolución del producto, desde la
-                    planificación de funcionalidades hasta la publicación en entornos
-                    productivos.</p>
+                  <p>Gestioné la evolución del producto desde la planificación de funcionalidades hasta la publicación
+                    en entornos productivos.</p>
                 </li>
                 <li>
-                  <p>👉 Trabajé en la integración con bases de datos no relacionales
-                    (MongoDB) y la creación de endpoints eficientes para consumo móvil.</p>
+                  <p>Trabajé con MongoDB y en la creación de endpoints eficientes para consumo móvil.</p>
                 </li>
                 <li>
-                  <p>👉 Coordiné con el equipo de diseño UX/UI para implementar interfaces
-                    amigables y adaptables a distintos dispositivos.</p>
+                  <p>Coordiné con el equipo de diseño UX/UI para implementar interfaces amigables y adaptables a
+                    distintos dispositivos.</p>
                 </li>
                 <li>
-                  <p>👉 Participé en sprints y tareas planificadas con metodología ágil,
-                    manteniendo comunicación constante con producto y QA.</p>
+                  <p>Participé en sprints y tareas planificadas bajo metodologías ágiles.</p>
                 </li>
               </ul>
 
@@ -822,26 +799,26 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title" style="display: flex; align-items: center; gap: 6px;">
-                Teaching Assistant - Henry
+                Teaching Assistant - Henry Bootcamp
                 <img src="https://cdn.jsdelivr.net/gh/hampusborgos/country-flags/svg/ar.svg" alt="Argentina"
                   title="Argentina" style="width: 20px; height: 14px;" />
               </h4>
 
-              <span>02/2023 - 04/2023</span>
+              <span>Argentina · 02/2023 — 04/2023</span>
 
               <ul class="timeline-text">
                 <li>
-                  <p>👉 Acompañé a más de 20 estudiantes en su proceso formativo,
-                    promoviendo el trabajo colaborativo mediante Pair Programming.</p>
+                  <p>Acompañé a más de 20 estudiantes en su proceso formativo, promoviendo el trabajo colaborativo
+                    mediante Pair Programming.</p>
                 </li>
                 <li>
-                  <p>👉 Asistí en la resolución de ejercicios prácticos y proyectos grupales,
-                    facilitando su comprensión de conceptos clave en desarrollo web.</p>
+                  <p>Asistí en la resolución de ejercicios prácticos y proyectos grupales, facilitando la comprensión
+                    de
+                    conceptos clave en desarrollo web.</p>
                 </li>
                 <li>
-                <li>
-                  <p>👉 Propuse mejoras en la dinámica del Bootcamp para optimizar la
-                    experiencia educativa y técnica.</p>
+                  <p>Propuse mejoras en la dinámica del Bootcamp para optimizar la experiencia educativa y técnica.
+                  </p>
                 </li>
               </ul>
 
@@ -870,27 +847,38 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Tecnicatura en desarrollo de Software</h4>
+              <h4 class="h4 timeline-item-title">Tecnicatura en Desarrollo de Software</h4>
 
-              <span>Universidad de la Punta <br> San Luis, Argentina</span>
+              <span>Universidad de la Punta · San Luis, Argentina</span>
 
-              <p class="timeline-text">
-                Duración : 03/2025 - Actualidad <br>
-                Porcentaje : 5.56% <br>
-                Promedio: 9.50
-              </p>
+              <ul class="timeline-text">
+                <li>
+                  <p>Formación universitaria en desarrollo de software, bases de datos, arquitectura y fundamentos de
+                    ingeniería.</p>
+                </li>
+                <li>
+                  <p>En curso desde 03/2025, con promedio actual de 9.50.</p>
+                </li>
+              </ul>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Programador Backend Jr.</h4>
+              <h4 class="h4 timeline-item-title">Programador Backend</h4>
 
-              <span>CoderHouse <br>Argentina</span>
+              <span>CoderHouse · Argentina</span>
 
-              <p class="timeline-text">
-                Duración: 02/2024 - 09/2024<br> Porcentaje: 100%
-              </p>
+              <ul class="timeline-text">
+                <li>
+                  <p>Formación enfocada en JavaScript, Node.js, APIs, persistencia de datos y construcción de
+                    servicios
+                    backend.</p>
+                </li>
+                <li>
+                  <p>Completado entre 02/2024 y 09/2024.</p>
+                </li>
+              </ul>
 
             </li>
 
@@ -898,11 +886,17 @@
 
               <h4 class="h4 timeline-item-title">Full Stack Web Developer</h4>
 
-              <span>Henry <br> Argentina</span>
+              <span>Henry · Argentina</span>
 
-              <p class="timeline-text">
-                Duración: 10/2022 - 04/2023 <br> Porcentaje: 100%
-              </p>
+              <ul class="timeline-text">
+                <li>
+                  <p>Bootcamp intensivo de desarrollo web full stack, trabajo colaborativo y entrega de proyectos
+                    reales.</p>
+                </li>
+                <li>
+                  <p>Completado entre 10/2022 y 04/2023.</p>
+                </li>
+              </ul>
 
             </li>
 
@@ -1096,65 +1090,85 @@
         <br>
 
         <div class="separator"> </div>
-        <h1 class="typing-text"></h1>
-        <h3 class="h3">EL CRECIMIENTO NO SE DETIENE EN EL COMPILADOR...</h3>
-        <br>
-        <!--
-        - Hobbies
-      -->
-        <section class="skills">
 
-          <h3 class="skills-title" style="color: var(--vegas-gold); font-size: larger;">Intereses & Hobbies</h3>
-          <!-- cdn devicon icons used -->
-          <ul class="skills-list has-scrollbar">
+        <section class="profile-closer">
+          <div class="profile-closer-copy">
+            <p class="section-badge section-badge-inline">Perfil integral</p>
+            <h3 class="h3 profile-closer-title">El crecimiento profesional también se construye fuera del código</h3>
+            <p class="profile-closer-lead">Me interesan los entornos donde disciplina, curiosidad y aprendizaje
+              constante también aparecen fuera del trabajo técnico.</p>
+          </div>
 
-            <li class="skills-item">
-              <a href="#">
-                <img src="images/Hobbies/Futbol.png" alt="TypeScript" />
-              </a>
-              <p>Futbol</p>
-            </li>
+          <div class="interest-grid">
+            <article class="interest-card">
+              <figure class="interest-icon-wrap">
+                <img src="images/Hobbies/Futbol.png" alt="Futbol" />
+              </figure>
+              <h4>Fútbol</h4>
+              <p>Competencia, estrategia y lectura del juego.</p>
+            </article>
 
-            <li class="skills-item">
-              <a href="#">
-                <img src="images/Hobbies//basket.png" alt="TypeScript" />
-              </a>
-              <p>Basquet</p>
-            </li>
+            <article class="interest-card">
+              <figure class="interest-icon-wrap">
+                <img src="images/Hobbies//basket.png" alt="Basquet" />
+              </figure>
+              <h4>Básquet</h4>
+              <p>Ritmo, coordinación y toma de decisiones rápida.</p>
+            </article>
 
-            <li class="skills-item">
-              <a href="#">
-                <img src="images/Hobbies/einstein.png" alt="TypeScript" />
-              </a>
-              <p>Física</p>
-            </li>
+            <article class="interest-card">
+              <figure class="interest-icon-wrap">
+                <img src="images/Hobbies/einstein.png" alt="Fisica" />
+              </figure>
+              <h4>Física</h4>
+              <p>Interés por entender sistemas, causas y comportamiento.</p>
+            </article>
 
-            <li class="skills-item">
-              <a href="#">
-                <img src="images/Hobbies/quimica.png" alt="TypeScript" />
-              </a>
-              <p>Quimica</p>
-            </li>
+            <article class="interest-card">
+              <figure class="interest-icon-wrap">
+                <img src="images/Hobbies/quimica.png" alt="Quimica" />
+              </figure>
+              <h4>Química</h4>
+              <p>Curiosidad científica y gusto por los procesos complejos.</p>
+            </article>
 
-            <li class="skills-item">
-              <a href="#">
-                <img src="images/Hobbies/juegos.png" alt="TypeScript" />
-              </a>
-              <p>Gaming</p>
-            </li>
+            <article class="interest-card">
+              <figure class="interest-icon-wrap">
+                <img src="images/Hobbies/juegos.png" alt="Gaming" />
+              </figure>
+              <h4>Gaming</h4>
+              <p>Resolución de problemas, táctica y aprendizaje iterativo.</p>
+            </article>
 
-            <li class="skills-item">
-              <a href="#">
-                <img src="images/Hobbies/libros.png" alt="TypeScript" />
-              </a>
-              <p>Lectura</p>
-            </li>
+            <article class="interest-card">
+              <figure class="interest-icon-wrap">
+                <img src="images/Hobbies/libros.png" alt="Lectura" />
+              </figure>
+              <h4>Lectura</h4>
+              <p>Ideas nuevas, pensamiento crítico y profundidad conceptual.</p>
+            </article>
+          </div>
 
-          </ul>
+          <div class="resume-cta-card">
+            <div class="resume-cta-copy">
+              <p class="resume-eyebrow">CV actualizado</p>
+              <h3 class="h3">Descargar CV actualizado</h3>
+              <p class="resume-copy">Versión alineada con tu experiencia reciente, foco backend y stack actual de
+                trabajo.</p>
+            </div>
 
+            <a href="files/Currículum Manuel Zuñiga 2026.pdf" class="resume-button profile-resume-button">
+              <ul>
+                <li>Descarga</li>
+                <li>Descargando</li>
+                <li class="open-file">Click aqui para finalizar</li>
+              </ul>
+              <div>
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </a>
+          </div>
         </section>
-
-        <br>
 
         <!-- <section class="timeline">
 
@@ -1233,111 +1247,6 @@
         </section> -->
 
 
-        <!--Domain Knowledge-->
-
-        <!-- <section class="domain">
-
-          <h3 class="h3 domain-title">Ongoing</h3>
-
-          <ul class="domain-list content-card">
-
-            <li class="domain-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Solidity</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="domain-progress-bg">
-                <div class="domain-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li> -->
-
-        <!-- <li class="domain-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Django</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="domain-progress-bg">
-                <div class="domain-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li> -->
-
-        <!-- <li class="domain-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Tailwind</h5>
-                <data value="90">40%</data>
-              </div>
-
-              <div class="domain-progress-bg">
-                <div class="domain-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="domain-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React</h5>
-                <data value="50">20%</data>
-              </div>
-
-              <div class="domain-progress-bg">
-                <div class="domain-progress-fill" style="width: 20%;"></div>
-              </div>
-
-            </li>
-
-            <li class="domain-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">NLP</h5>
-                <data value="60">30%</data>
-              </div>
-
-              <div class="domain-progress-bg">
-                <div class="domain-progress-fill" style="width: 30%;"></div>
-              </div>
-
-            </li>
-          </ul>
-
-        </section> -->
-
-        <!-- 
-        
-      Download Resume Buttons  
-      
-      -->
-
-        <div class="separator"> </div>
-
-        <div class="resume-container">
-          <h3 class="h3">Descargar CV actualizado </h3>
-          <a href="files/CV-Manuel-Zuñiga-Desarrollador-de-Software.pdf" class="resume-button">
-            <ul>
-              <li>Descarga</li>
-              <li>Descargando</li>
-              <li class="open-file">Click aqui para finalizar</li>
-            </ul>
-            <div>
-              <svg viewBox="0 0 24 24"></svg>
-            </div>
-          </a>
-
-        </div>
-
-        <!-- dribbble -->
-        <a class="dribbble" href="https://dribbble.com/shots/7299868-Download-Buttons" target="_blank">
-          <img
-            src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg"
-            alt=""></a>
-
       </article>
 
       <!--
@@ -1347,207 +1256,164 @@
       <article class="certifications" data-page="certificaciones">
 
         <header>
-          <h2 class="h2 article-title">Certificationes</h2>
+          <h2 class="h2 article-title">Certificaciones</h2>
         </header>
 
-        <section class="projects">
+        <section class="section-intro section-intro-compact certifications-intro">
+          <p class="section-intro-copy certifications-intro-copy">Formación completada y cursos en progreso
+            orientados a backend, cloud y arquitectura de software.</p>
+        </section>
+
+        <section class="projects certifications-showcase">
 
           <ul class="filter-list">
-
             <li class="filter-item">
               <button class="active" data-filter-btn>Todas</button>
             </li>
-
-
             <li class="filter-item">
               <button data-filter-btn>Backend</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Frontend</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Cloud</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Herramientas</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>UI UX</button>
-            </li>
-
-
           </ul>
 
           <div class="filter-select-box">
-
             <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
+              <div class="select-value" data-selecct-value>Todas</div>
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
             </button>
 
             <ul class="select-list">
-
               <li class="select-item">
                 <button data-select-item>Todas</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Backend</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Frontend</button>
               </li>
-
-              <li class="select-item">
-                <button data-select-item>Desarrollo Web</button>
-              </li>
-
               <li class="select-item">
                 <button data-select-item>Cloud</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Herramientas</button>
               </li>
-
-              <li class="filter-item">
-                <button data-filter-btn>UI UX</button>
-              </li>
-
-
             </ul>
-
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="Backend">
+          <ul class="project-list certifications-list">
+            <li class="project-item certification-card active" data-filter-item data-category="backend">
               <a href="https://pub.coderhouse.com/legacy-certificates/66fdce6e612c3525f55dd462?lang=es">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
-
                   <img src="images/Certificate/coderhouse2.jpg" alt="Backend Developer Coderhouse" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Backend Developer</h3>
-                <p class="project-category">Backend</p>
-                <p class="project-detail">Calificacion : 10 🏆</p>
+                <p class="project-category">CoderHouse · Backend</p>
+                <p class="project-detail">Calificación final <strong>10</strong></p>
+                <p class="project-role"><span class="project-role-label">Estado</span><span
+                    class="project-status-badge is-complete">Completado</span></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Frontend">
+            <li class="project-item certification-card active" data-filter-item data-category="frontend">
               <a
                 href="https://certificates.soyhenry.com/new-cert?id=18e95426bb7b01e81d158b9a8e7f74d426c0161b573344f1729d2b1c2e27f62b">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
-
-                  <img src="images/Certificate/henry2.jpg" alt="Internet of Things: Design concepts and use cases"
-                    loading="lazy">
+                  <img src="images/Certificate/henry2.jpg" alt="Full Stack Web Developer Henry" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Full Stack Web Developer</h3>
-                <p class="project-category">Desarrollo Web</p>
-                <p class="project-detail">Calificacion : 10 🏆</p>
+                <p class="project-category">Henry · Desarrollo Web</p>
+                <p class="project-detail">Calificación final <strong>10</strong></p>
+                <p class="project-role"><span class="project-role-label">Estado</span><span
+                    class="project-status-badge is-complete">Completado</span></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Herramientas">
+            <li class="project-item certification-card active" data-filter-item data-category="herramientas">
               <a
                 href="https://www.udemy.com/course/ultimate-docker-guia-de-cero-hasta-despliegues/?couponCode=MT220725G1">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
-
-                  <img src="images/Certificate/cursando.png" alt="Internet of Things: Design concepts and use cases"
-                    loading="lazy">
+                  <img src="images/Certificate/cursando.png" alt="Curso de Docker en curso" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Ultimate Docker: guía de cero hasta despliegues</h3>
-                <p class="project-category">Herramientas</p>
-                <p class="project-detail">Porcentaje : 60%</p>
+                <p class="project-category">Udemy · Herramientas</p>
+                <p class="project-detail">Avance actual <strong>60%</strong></p>
+                <p class="project-role"><span class="project-role-label">Estado</span><span
+                    class="project-status-badge is-progress">En curso</span></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Herramientas">
+            <li class="project-item certification-card active" data-filter-item data-category="herramientas">
               <a href="https://www.udemy.com/course/microservicios-nodejs-graphql/">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
-
-                  <img src="images/Certificate/cursando.png" alt="Internet of Things: Design concepts and use cases"
-                    loading="lazy">
+                  <img src="images/Certificate/cursando.png" alt="Curso de microservicios en curso" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Microservicios con Node.js y GraphQL: La Guía Definitiva</h3>
-                <p class="project-category">Herramientas</p>
-                <p class="project-detail">Porcentaje : 43%</p>
+                <h3 class="project-title">Microservicios con Node.js y GraphQL</h3>
+                <p class="project-category">Udemy · Herramientas</p>
+                <p class="project-detail">Avance actual <strong>43%</strong></p>
+                <p class="project-role"><span class="project-role-label">Estado</span><span
+                    class="project-status-badge is-progress">En curso</span></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Cloud">
+            <li class="project-item certification-card active" data-filter-item data-category="cloud">
               <a href="https://www.udemy.com/course/despliegue-proyecto-nodejs-aws/">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
-
-                  <img src="images/Certificate/cursando.png" alt="Internet of Things: Design concepts and use cases"
-                    loading="lazy">
+                  <img src="images/Certificate/cursando.png" alt="Curso de despliegue en AWS en curso" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Despliegue de Proyecto de Node.js en Amazon Web Services AWS</h3>
-                <p class="project-category">Cloud</p>
-                <p class="project-detail">Porcentaje : 27%</p>
+                <h3 class="project-title">Despliegue de Proyecto de Node.js en AWS</h3>
+                <p class="project-category">Udemy · Cloud</p>
+                <p class="project-detail">Avance actual <strong>27%</strong></p>
+                <p class="project-role"><span class="project-role-label">Estado</span><span
+                    class="project-status-badge is-progress">En curso</span></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Cloud">
+            <li class="project-item certification-card active" data-filter-item data-category="cloud">
               <a href="https://www.udemy.com/course/serverless123">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="link"></ion-icon>
                   </div>
-
-                  <img src="images/Certificate/cursando.png" alt="Internet of Things: Design concepts and use cases"
-                    loading="lazy">
+                  <img src="images/Certificate/cursando.png" alt="Curso de AWS Lambda en curso" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">AWS Lambda/Serverless con Node.js</h3>
-                <p class="project-category">Cloud</p>
-                <p class="project-detail">Porcentaje : 20%</p>
+                <p class="project-category">Udemy · Cloud</p>
+                <p class="project-detail">Avance actual <strong>20%</strong></p>
+                <p class="project-role"><span class="project-role-label">Estado</span><span
+                    class="project-status-badge is-progress">En curso</span></p>
               </a>
             </li>
-
-
           </ul>
 
         </section>
 
       </article>
-
-
 
       <!--
         - #PORTFOLIO
@@ -1562,83 +1428,117 @@
         <section class="projects">
 
           <ul class="filter-list">
-
             <li class="filter-item">
               <button class="active" data-filter-btn>Todas</button>
             </li>
-
-            <!-- <li class="filter-item">
-              <button data-filter-btn>E-Commerce</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Frontend</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Python</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Java</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
-            </li> -->
-
           </ul>
 
           <div class="filter-select-box">
-
             <button class="filter-select" data-select>
-
-              <div class="select-value" data-select-value>Select category</div>
-
+              <div class="select-value" data-select-value>Todas</div>
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
             </button>
 
             <ul class="select-list">
-
               <li class="select-item">
                 <button data-select-item>Todas</button>
               </li>
-
-              <!-- <li class="select-item">
-                <button data-select-item>ui ux design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Frontend</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Python</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Java</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>web development</button>
-              </li> -->
-
             </ul>
-
           </div>
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="ui ux design">
-              <a href="images/Projects/Pizquito.png">
-                <h1 class="h4 service-item-title">🏫 Pizquito</h1>
+            <li class="project-item recent-private-project restaurant-project active" data-filter-item
+              data-category="ui ux design">
+              <a href="https://github.com/Zetta94/zitorapp" target="_blank" rel="noopener noreferrer">
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">🍽️ Restaurante SaaS</h1>
+                  <span class="project-access-badge">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    Privado
+                  </span>
+                </div>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                  </div>
+
+                  <img src="images/restaurante-saas.png" alt="Restaurante SaaS" loading="lazy"
+                    class="restaurant-project-image">
+                </figure>
+
+                <h1 class="project-detail">SaaS de gestión para restaurantes</h1>
+                <p class="project-category">Plataforma reciente para operación, administración y seguimiento del flujo
+                  de trabajo en restaurantes.</p>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Diseño funcional, evolución del
+                  producto y desarrollo de la solución.</p>
+              </a>
+            </li>
+
+            <li class="project-item recent-private-project active" data-filter-item data-category="ui ux design">
+              <a href="https://github.com/Zetta94/creditos-client" target="_blank" rel="noopener noreferrer">
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">📊 Creditos Dashboard</h1>
+                  <span class="project-access-badge">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    Privado
+                  </span>
+                </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                  </div>
+
+                  <img src="images/Projects/creditos-dashboard.svg" alt="Creditos Dashboard" loading="lazy">
+                </figure>
+
+                <h1 class="project-detail">Dashboard de créditos y seguimiento comercial</h1>
+                <p class="project-category">Interfaz enfocada en visualización, control operativo y lectura clara de
+                  información vinculada a créditos.</p>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Desarrollo del producto,
+                  refinamiento del dashboard y mejora de la experiencia.</p>
+              </a>
+            </li>
+
+            <li class="project-item recent-private-project active" data-filter-item data-category="ui ux design">
+              <a href="https://andromeda.im/" target="_blank" rel="noopener noreferrer">
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">📱 Andrómeda</h1>
+                  <span class="project-access-badge">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    Privado
+                  </span>
+                </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                  </div>
+
+                  <img src="images/Projects/adnromeda.png" alt="Andrómeda" loading="lazy">
+                </figure>
+
+                <h1 class="project-detail">Gestor académico</h1>
+                <p class="project-category">Plataforma digital de comunicación y gestión para optimizar la interacción
+                  entre los actores del proceso educativo.</p>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Mantenimiento, evolución funcional y
+                  desarrollo del producto.</p>
+              </a>
+            </li>
+
+            <li class="project-item recent-private-project active" data-filter-item data-category="ui ux design">
+              <a href="images/Projects/Pizquito.png">
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">🏫 Pizquito</h1>
+                  <span class="project-access-badge">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    Privado
+                  </span>
+                </div>
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
                   </div>
 
                   <img src="images/Projects/Pizquito.png" alt="Ecommerce Candy Store" loading="lazy">
@@ -1647,41 +1547,48 @@
                 <h1 class="project-detail">Gestor Académico</h1>
                 <p class="project-category">Plataforma web responsive de gestión escolar orientada a procesos
                   administrativos.</p>
-                <h2 class="project-category"
-                  style="color: #d1d5db; display: flex; align-items: center; flex-wrap: wrap;">
-                  <span style="margin-right: 8px;">👨‍💻</span>
-                  <span style="color: #ffffff; font-weight: bold; margin-right: 4px;">Rol:</span>
-                  <span style="color: #d1d5db;">Diseño e implementación del backend.</span>
-                </h2>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Diseño e implementación del
+                  backend.
+                </p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="ui ux design">
+            <li class="project-item recent-private-project active" data-filter-item data-category="ui ux design">
               <a href="images/Projects/paulownia.png">
-                <h1 class="h4 service-item-title">🧩 Paulownia</h1>
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">🧩 Paulownia</h1>
+                  <span class="project-access-badge">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    Privado
+                  </span>
+                </div>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
                   </div>
 
                   <img src="images/Projects/paulownia.png" alt="Ecommerce Candy Store" loading="lazy">
                 </figure>
 
                 <h1 class="project-detail">Portal Interactivo</h1>
-                <p class="project-category">Desarrollo de sitio web con juegos educativos integrados, complementarios a
+                <p class="project-category">Desarrollo de sitio web con juegos educativos integrados,
+                  complementarios a
                   un libro de autoría privada.</p>
-                <h2 class="project-category"
-                  style="color: #d1d5db; display: flex; align-items: center; flex-wrap: wrap;">
-                  <span style="margin-right: 8px;">👨‍💻</span>
-                  <span style="color: #ffffff; font-weight: bold; margin-right: 4px;">Rol:</span>
-                  <span style="color: #d1d5db;">Diseño e implementación del backend.</span>
-                </h2>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Diseño e implementación del
+                  backend.
+                </p>
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="ui ux design">
               <a href="https://github.com/Zetta94/Proyecto-Final-Ecommerce-CoderHouse">
-                <h1 class="h4 service-item-title">🛒 E-Commerce</h1>
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">🛒 E-Commerce</h1>
+                  <span class="project-access-badge project-access-badge-academic">
+                    <ion-icon name="school-outline"></ion-icon>
+                    Académico
+                  </span>
+                </div>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1691,20 +1598,24 @@
                 </figure>
 
                 <h1 class="project-detail">Plataforma de Comercio Electrónico</h1>
-                <p class="project-category">Desarrollo completo de una tienda online como proyecto final del curso de
+                <p class="project-category">Desarrollo completo de una tienda online como proyecto final del curso
+                  de
                   Backend en Coderhouse.</p>
-                <h2 class="project-category"
-                  style="color: #d1d5db; display: flex; align-items: center; flex-wrap: wrap;">
-                  <span style="margin-right: 8px;">👨‍💻</span>
-                  <span style="color: #ffffff; font-weight: bold; margin-right: 4px;">Rol:</span>
-                  <span style="color: #d1d5db;">Mantenimiento y desarrollo completo de la aplicación.</span>
-                </h2>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Mantenimiento y desarrollo
+                  completo
+                  de la aplicación.</p>
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="ui ux design">
               <a href="https://github.com/Zetta94/ProManitasAPI">
-                <h1 class="h4 service-item-title">👷 Promanitas</h1>
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">👷 Promanitas</h1>
+                  <span class="project-access-badge project-access-badge-academic">
+                    <ion-icon name="school-outline"></ion-icon>
+                    Académico
+                  </span>
+                </div>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1714,21 +1625,25 @@
                 </figure>
 
                 <h1 class="project-detail">Plataforma de Servicios</h1>
-                <p class="project-category">Desarrollo completo de una plataforma online como proyecto final del curso
+                <p class="project-category">Desarrollo completo de una plataforma online como proyecto final del
+                  curso
                   de
                   Full Stack en Henry.</p>
-                <h2 class="project-category"
-                  style="color: #d1d5db; display: flex; align-items: center; flex-wrap: wrap;">
-                  <span style="margin-right: 8px;">👨‍💻</span>
-                  <span style="color: #ffffff; font-weight: bold; margin-right: 4px;">Rol:</span>
-                  <span style="color: #d1d5db;">Mantenimiento y desarrollo completo del backend.</span>
-                </h2>
+                <p class="project-role"><span class="project-role-label">Rol:</span>Mantenimiento y desarrollo
+                  completo
+                  del backend.</p>
               </a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="ui ux design">
               <a href="https://github.com/Zetta94/PI-Dogs-Finalizado">
-                <h1 class="h4 service-item-title">🐶 PI Dogs</h1>
+                <div class="project-heading-row">
+                  <h1 class="h4 service-item-title">🐶 PI Dogs</h1>
+                  <span class="project-access-badge project-access-badge-academic">
+                    <ion-icon name="school-outline"></ion-icon>
+                    Académico
+                  </span>
+                </div>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
@@ -1740,36 +1655,8 @@
                 <h1 class="project-detail">Guía interactiva de razas caninas</h1>
                 <p class="project-category">Sitio web responsive diseñado para explorar distintas razas de perros,
                   incluyendo características físicas, personalidad, cuidados y curiosidades.</p>
-                <h2 class="project-category"
-                  style="color: #d1d5db; display: flex; align-items: center; flex-wrap: wrap;">
-                  <span style="margin-right: 8px;">👨‍💻</span>
-                  <span style="color: #ffffff; font-weight: bold; margin-right: 4px;">Rol:</span>
-                  <span style="color: #d1d5db;">Desarrollo completo de la aplicación.</span>
-                </h2>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ui ux design">
-              <a href="https://andromeda.im/">
-                <h1 class="h4 service-item-title">📱 Andrómeda</h1>
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="images/Projects/adnromeda.png" alt="Ecommerce Candy Store" loading="lazy">
-                </figure>
-
-                <h1 class="project-detail">Gestor Académico</h1>
-                <p class="project-category">Plataforma digital de comunicación, que conecta, simplifica y optimiza la
-                  transmisión de información entre todos los actores vinculados al proceso educativo.</p>
-                <h2 class="project-category"
-                  style="color: #d1d5db; display: flex; align-items: center; flex-wrap: wrap;">
-                  <span style="margin-right: 8px;">👨‍💻</span>
-                  <span style="color: #ffffff; font-weight: bold; margin-right: 4px;">Rol:</span>
-                  <span style="color: #d1d5db;">Mantenimiento y desarrollo.</span>
-                </h2>
-
+                <p class="project-role"><span class="project-role-label">Rol:</span>Desarrollo completo de la
+                  aplicación.</p>
               </a>
             </li>
 
@@ -1818,7 +1705,8 @@
                   <h3 class="h3 blog-item-title">The Psychology Behind Great UX: How Users Think and Behave</h3>
 
                   <p class="blog-text">
-                    🤔 Ever wondered why some designs feel effortless while others leave you frustrated? The secret lies
+                    🤔 Ever wondered why some designs feel effortless while others leave you frustrated? The secret
+                    lies
                     in psychology!🧠✨ Master these 8 laws....
                   </p>
 
@@ -1847,7 +1735,8 @@
                   <h3 class="h3 blog-item-title">Future of Web with AI : Designing and Development</h3>
 
                   <p class="blog-text">
-                    🚀 Dive into how AI is transforming web development and UI/UX design.🤖🖥️ Explore AI-driven tools
+                    🚀 Dive into how AI is transforming web development and UI/UX design.🤖🖥️ Explore AI-driven
+                    tools
                     that automate coding💡, enhance user experiences📊, and personalize interactions....
                   </p>
 
@@ -1876,8 +1765,10 @@
                   <h3 class="h3 blog-item-title">Becoming a Web Developer : From zero to hero</h3>
 
                   <p class="blog-text">
-                    🚀 Ready to dive into the world of web development but not sure where to start? 🤯 Don’t worry! This
-                    ultimate guide will walk you through the essentials, pro tips, and FREE resources to kickstart your
+                    🚀 Ready to dive into the world of web development but not sure where to start? 🤯 Don’t worry!
+                    This
+                    ultimate guide will walk you through the essentials, pro tips, and FREE resources to kickstart
+                    your
                     journey. 💻✨ Whether you're a beginner or looking to level up, this is your roadmap to
                     success!🔥🚀....
                   </p>
@@ -1940,7 +1831,8 @@
                   <h3 class="h3 blog-item-title">Color Psychology in Web Designing</h3>
 
                   <p class="blog-text">
-                    🎨 Elevate your web designs with the perfect blend of code & creativity! 🚀 Master color theory to
+                    🎨 Elevate your web designs with the perfect blend of code & creativity! 🚀 Master color theory
+                    to
                     craft stunning, user-friendly experiences🌈✨....
                   </p>
 
@@ -1999,47 +1891,113 @@
           <h2 class="h2 article-title">Contacto</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.530252940835!2d-66.34360068515187!3d-33.29501038179207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d42b13cf6b0f15%3A0x6f598b70c420a4a3!2sSan%20Luis%2C%20Argentina!5e0!3m2!1ses!2sar!4v1718371234567"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
+        <section class="section-intro section-intro-compact contact-intro">
+          <p class="section-intro-copy contact-intro-copy">Si querés conversar sobre una oportunidad, una necesidad
+            puntual o un proyecto en marcha, podés escribirme por cualquiera de estos canales.</p>
         </section>
 
-        <link href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/css/ionicons.min.css" rel="stylesheet">
+        <div class="contact-shell">
+          <section class="contact-panel">
+            <div class="contact-panel-copy">
+              <p class="contact-eyebrow">canales directos</p>
+              <h3 class="h3 contact-panel-title">Elegí el canal que te quede más cómodo.</h3>
+              <p class="contact-panel-lead">Suelo responder mejor cuando el mensaje ya trae algo de contexto: qué
+                necesitan, en qué etapa están y cómo podría aportar.</p>
+            </div>
 
-        <section class="contact-form">
-          <h3 class="h3 form-title">Formulario de contacto</h3>
+            <div class="contact-method-grid">
+              <a href="mailto:manuelalexis68@hotmail.com" class="contact-method-card">
+                <span class="contact-method-icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </span>
+                <span class="contact-method-body">
+                  <span class="contact-method-label">Email</span>
+                  <strong class="contact-method-value">manuelalexis68@hotmail.com</strong>
+                  <span class="contact-method-meta">Ideal para propuestas formales o coordinación inicial.</span>
+                </span>
+              </a>
 
-          <form action="https://formspree.io/f/mldlgqay" method="POST" class="form" data-form novalidate>
-            <div class="input-wrapper">
-              <div class="input-group">
-                <input type="text" name="fullname" class="form-input" placeholder="Nombre completo o Empresa" required
-                  data-form-input>
-                <small class="error-message"></small>
-              </div>
+              <a href="https://wa.me/5492664920868" target="_blank" rel="noopener noreferrer"
+                class="contact-method-card">
+                <span class="contact-method-icon">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </span>
+                <span class="contact-method-body">
+                  <span class="contact-method-label">WhatsApp</span>
+                  <strong class="contact-method-value">+54 9 266 4920868</strong>
+                  <span class="contact-method-meta">La vía más rápida para una conversación directa.</span>
+                </span>
+              </a>
 
-              <div class="input-group">
-                <input type="email" name="email" class="form-input" placeholder="Dirección de email" required
-                  data-form-input>
-                <small class="error-message"></small>
+              <a href="https://www.linkedin.com/in/manuzetta94/" target="_blank" rel="noopener noreferrer"
+                class="contact-method-card">
+                <span class="contact-method-icon">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </span>
+                <span class="contact-method-body">
+                  <span class="contact-method-label">LinkedIn</span>
+                  <strong class="contact-method-value">Perfil profesional</strong>
+                  <span class="contact-method-meta">Para networking, referencias y contexto profesional.</span>
+                </span>
+              </a>
+
+              <div class="contact-method-card contact-method-card-static">
+                <span class="contact-method-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </span>
+                <span class="contact-method-body">
+                  <span class="contact-method-label">Ubicación</span>
+                  <strong class="contact-method-value">San Luis, Argentina</strong>
+                  <span class="contact-method-meta">Disponible para trabajo remoto y colaboración con equipos
+                    distribuidos.</span>
+                </span>
               </div>
             </div>
 
-            <div class="input-group">
-              <textarea name="message" class="form-input" placeholder="Tu Mensaje" required data-form-input></textarea>
-              <small class="error-message"></small>
+            <figure class="contact-banner">
+              <img src="images/banner.png" alt="Manuel Zuñiga trabajando en entorno backend" loading="lazy">
+            </figure>
+          </section>
+
+          <section class="contact-form contact-form-card">
+            <div class="contact-form-copy">
+              <p class="contact-eyebrow">mensaje directo</p>
+              <h3 class="h3 form-title contact-form-title">Contame qué necesitás.</h3>
+              <p class="contact-form-lead">Con unas pocas líneas alcanza: contexto, objetivo y, si ya lo tienen claro,
+                stack o tipo de perfil buscado.</p>
             </div>
 
-            <button class="form-btn" type="submit" data-form-btn disabled>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Enviar Mensaje</span>
-            </button>
-          </form>
+            <form action="https://formspree.io/f/mldlgqay" method="POST" class="form" data-form novalidate>
+              <div class="input-wrapper">
+                <div class="input-group">
+                  <input type="text" name="fullname" class="form-input" placeholder="Nombre completo o empresa" required
+                    data-form-input>
+                  <small class="error-message"></small>
+                </div>
 
-          <div id="toast" class="toast hidden">¡ Tu mensaje fue correctamente enviado !</div>
-        </section>
+                <div class="input-group">
+                  <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required
+                    data-form-input>
+                  <small class="error-message"></small>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <textarea name="message" class="form-input"
+                  placeholder="Contame objetivo, stack, etapa del proyecto o necesidad puntual" required
+                  data-form-input></textarea>
+                <small class="error-message"></small>
+              </div>
+
+              <button class="form-btn" type="submit" data-form-btn disabled>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Enviar mensaje</span>
+              </button>
+            </form>
+
+            <div id="toast" class="toast hidden">¡ Tu mensaje fue correctamente enviado !</div>
+          </section>
+        </div>
 
 
       </article>
